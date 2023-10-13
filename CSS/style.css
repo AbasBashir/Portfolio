@@ -260,6 +260,119 @@ html {
 #grid-container #header .about-container .socialMedia-container .linkedin-icon img {
   order: 1;
 }
+#grid-container #education {
+  grid-area: education;
+  padding-bottom: 50px;
+}
+#grid-container #education .main-title {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 3rem;
+  padding-bottom: 40px;
+  color: #008F11;
+}
+#grid-container #education .line-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+#grid-container #education .line-container .line {
+  position: relative;
+  background-color: #4fc65d;
+  width: 3px;
+  height: 550px;
+  margin: 0 auto;
+  border-radius: 10px;
+  z-index: -1;
+}
+#grid-container #education .line-container .line .circle1, #grid-container #education .line-container .line .circle2, #grid-container #education .line-container .line .circle3, #grid-container #education .line-container .line .circle4, #grid-container #education .line-container .line .circle5, #grid-container #education .line-container .line .circle6 {
+  position: absolute;
+  right: -6px;
+  background-color: #c4ffcb;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  z-index: -1;
+}
+#grid-container #education .line-container .line .circle1::before, #grid-container #education .line-container .line .circle2::before, #grid-container #education .line-container .line .circle3::before, #grid-container #education .line-container .line .circle4::before, #grid-container #education .line-container .line .circle5::before, #grid-container #education .line-container .line .circle6::before {
+  position: absolute;
+  right: 28px;
+  font-size: 1.9rem;
+  color: #000000;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  z-index: -1;
+}
+#grid-container #education .line-container .line .job {
+  position: absolute;
+  width: 30vw;
+  min-width: 120px;
+  left: 20px;
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 600;
+  z-index: -1;
+}
+#grid-container #education .line-container .line .circle1 {
+  top: 25px;
+}
+#grid-container #education .line-container .line .circle1 .year {
+  display: none;
+}
+#grid-container #education .line-container .line .circle1::before {
+  content: "2008";
+}
+#grid-container #education .line-container .line .circle2 {
+  top: 100px;
+}
+#grid-container #education .line-container .line .circle2 .year {
+  display: none;
+}
+#grid-container #education .line-container .line .circle2::before {
+  content: "2013";
+}
+#grid-container #education .line-container .line .circle3 {
+  top: 180px;
+}
+#grid-container #education .line-container .line .circle3 .year {
+  display: none;
+}
+#grid-container #education .line-container .line .circle3::before {
+  content: "2016";
+}
+#grid-container #education .line-container .line .circle4 {
+  top: 265px;
+}
+#grid-container #education .line-container .line .circle4 .year {
+  display: none;
+}
+#grid-container #education .line-container .line .circle4::before {
+  content: "2018";
+}
+#grid-container #education .line-container .line .circle5 {
+  top: 365px;
+}
+#grid-container #education .line-container .line .circle5 .year {
+  display: none;
+}
+#grid-container #education .line-container .line .circle5 .job {
+  overflow-wrap: break-word;
+}
+#grid-container #education .line-container .line .circle5::before {
+  content: "2021";
+}
+#grid-container #education .line-container .line .circle6 {
+  top: 455px;
+}
+#grid-container #education .line-container .line .circle6 .year {
+  display: none;
+}
+#grid-container #education .line-container .line .circle6 .job {
+  word-wrap: break-word;
+}
+#grid-container #education .line-container .line .circle6::before {
+  content: "2023";
+}
 @media screen and (min-width: 650px) and (max-width: 1024px) {
   #grid-container #header .about-container {
     width: 100%;
@@ -379,6 +492,27 @@ html {
   #grid-container #header .about-container #button input:checked ~ .frame-container {
     top: 580px;
   }
+  #grid-container #education {
+    grid-area: education;
+  }
+  #grid-container #education .main-title {
+    font-size: 3.5rem;
+  }
+  #grid-container #education .line-container .line {
+    /* Things in common 2 */
+  }
+  #grid-container #education .line-container .line .circle1 .job, #grid-container #education .line-container .line .circle2 .job, #grid-container #education .line-container .line .circle3 .job, #grid-container #education .line-container .line .circle4 .job, #grid-container #education .line-container .line .circle5 .job, #grid-container #education .line-container .line .circle6 .job {
+    font-size: 2rem;
+  }
+  #grid-container #education .line-container .line .circle1 .year, #grid-container #education .line-container .line .circle2 .year, #grid-container #education .line-container .line .circle3 .year, #grid-container #education .line-container .line .circle4 .year, #grid-container #education .line-container .line .circle5 .year, #grid-container #education .line-container .line .circle6 .year {
+    font-size: 1.8rem;
+  }
+  #grid-container #education .line-container .line .circle5 .job {
+    overflow-wrap: unset;
+  }
+  #grid-container #education .line-container .line .circle6 .job {
+    word-wrap: unset;
+  }
 }
 @media screen and (min-width: 1024px) {
   #grid-container {
@@ -486,6 +620,134 @@ html {
   #grid-container #header .about-container #button input:checked ~ .frame-container {
     top: 350px;
   }
+  #grid-container #education {
+    grid-area: education;
+  }
+  #grid-container #education .main-title {
+    font-size: 3.5rem;
+  }
+  #grid-container #education .line-container {
+    width: 100%;
+    height: 72%;
+    margin: 0;
+  }
+  #grid-container #education .line-container .line {
+    top: 50px;
+    width: 90%;
+    height: 3px;
+    /* Things in common 1 */
+    /* Things in common 2 */
+    /*---------- point 1: Middle School ---------*/
+    /*---------- point 2: High School ---------*/
+    /*---------- point 3: Teacher Assistent ---------*/
+    /*---------- point 4: Motor vehicle assembler ---------*/
+    /*---------- point 5: Warehouse Worker ---------*/
+    /*---------- point 6: Chasacademy Student ---------*/
+  }
+  #grid-container #education .line-container .line .circle1::before, #grid-container #education .line-container .line .circle2::before, #grid-container #education .line-container .line .circle3::before, #grid-container #education .line-container .line .circle4::before, #grid-container #education .line-container .line .circle5::before, #grid-container #education .line-container .line .circle6::before {
+    display: none;
+  }
+  #grid-container #education .line-container .line .circle1, #grid-container #education .line-container .line .circle2, #grid-container #education .line-container .line .circle3, #grid-container #education .line-container .line .circle4, #grid-container #education .line-container .line .circle5, #grid-container #education .line-container .line .circle6 {
+    position: absolute;
+    right: -6px;
+    background-color: #c4ffcb;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    z-index: -1;
+    top: -6px;
+  }
+  #grid-container #education .line-container .line .circle1 .job, #grid-container #education .line-container .line .circle2 .job, #grid-container #education .line-container .line .circle3 .job, #grid-container #education .line-container .line .circle4 .job, #grid-container #education .line-container .line .circle5 .job, #grid-container #education .line-container .line .circle6 .job {
+    font-size: 1.8rem;
+    text-align: center;
+    position: absolute;
+  }
+  #grid-container #education .line-container .line .circle1 .year, #grid-container #education .line-container .line .circle2 .year, #grid-container #education .line-container .line .circle3 .year, #grid-container #education .line-container .line .circle4 .year, #grid-container #education .line-container .line .circle5 .year, #grid-container #education .line-container .line .circle6 .year {
+    display: block;
+    position: relative;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    right: 14px;
+    color: #008F11;
+  }
+  #grid-container #education .line-container .line .circle1 {
+    left: 2%;
+  }
+  #grid-container #education .line-container .line .circle1 > .job {
+    top: -28px;
+    left: -50px;
+  }
+  #grid-container #education .line-container .line .circle1 > .year {
+    top: 30px;
+  }
+  #grid-container #education .line-container .line .circle1 .job {
+    width: 130px;
+  }
+  #grid-container #education .line-container .line .circle2 {
+    left: 20%;
+  }
+  #grid-container #education .line-container .line .circle2 > .job {
+    top: 25px;
+    left: -45px;
+  }
+  #grid-container #education .line-container .line .circle2 > .year {
+    top: -30px;
+  }
+  #grid-container #education .line-container .line .circle2 .job {
+    width: 109px;
+  }
+  #grid-container #education .line-container .line .circle3 {
+    left: 38%;
+  }
+  #grid-container #education .line-container .line .circle3 > .job {
+    top: -42px;
+    left: -40px;
+  }
+  #grid-container #education .line-container .line .circle3 > .year {
+    top: 30px;
+  }
+  #grid-container #education .line-container .line .circle3 .job {
+    width: fit-content;
+  }
+  #grid-container #education .line-container .line .circle4 {
+    left: 56%;
+  }
+  #grid-container #education .line-container .line .circle4 > .job {
+    top: 25px;
+    left: -62px;
+  }
+  #grid-container #education .line-container .line .circle4 > .year {
+    top: -30px;
+  }
+  #grid-container #education .line-container .line .circle4 .job {
+    width: 160px;
+  }
+  #grid-container #education .line-container .line .circle5 {
+    left: 76%;
+  }
+  #grid-container #education .line-container .line .circle5 > .job {
+    top: -30px;
+    left: -50px;
+  }
+  #grid-container #education .line-container .line .circle5 > .year {
+    top: 30px;
+  }
+  #grid-container #education .line-container .line .circle5 .job {
+    width: fit-content;
+  }
+  #grid-container #education .line-container .line .circle6 {
+    left: 96%;
+  }
+  #grid-container #education .line-container .line .circle6 > .job {
+    top: 25px;
+    left: -74px;
+  }
+  #grid-container #education .line-container .line .circle6 > .year {
+    top: -30px;
+  }
+  #grid-container #education .line-container .line .circle6 .job {
+    width: fit-content;
+  }
 }
 @media screen and (min-width: 1570px) {
   #grid-container #header .about-container .contact-container h3 {
@@ -562,6 +824,113 @@ html {
   }
   #grid-container #header .about-container .about p {
     font-size: 1.6rem;
+  }
+  #grid-container #education .line-container .line {
+    height: 5px;
+    /* Things in common 2 */
+    /*---------- point 1: Middle School ---------*/
+    /*---------- point 2: High School ---------*/
+    /*---------- point 3: Teacher Assistent ---------*/
+    /*---------- point 4: Motor vehicle assembler ---------*/
+    /*---------- point 5: Warehouse Worker ---------*/
+    /*---------- point 6: Chasacademy Student ---------*/
+  }
+  #grid-container #education .line-container .line .circle1, #grid-container #education .line-container .line .circle2, #grid-container #education .line-container .line .circle3, #grid-container #education .line-container .line .circle4, #grid-container #education .line-container .line .circle5, #grid-container #education .line-container .line .circle6 {
+    position: absolute;
+    right: -6px;
+    background-color: #c4ffcb;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    z-index: -1;
+    top: -8px;
+  }
+  #grid-container #education .line-container .line .circle1 .job, #grid-container #education .line-container .line .circle2 .job, #grid-container #education .line-container .line .circle3 .job, #grid-container #education .line-container .line .circle4 .job, #grid-container #education .line-container .line .circle5 .job, #grid-container #education .line-container .line .circle6 .job {
+    font-size: 1.9rem;
+    text-align: center;
+    position: absolute;
+  }
+  #grid-container #education .line-container .line .circle1 .year, #grid-container #education .line-container .line .circle2 .year, #grid-container #education .line-container .line .circle3 .year, #grid-container #education .line-container .line .circle4 .year, #grid-container #education .line-container .line .circle5 .year, #grid-container #education .line-container .line .circle6 .year {
+    font-size: 1.9rem;
+    right: 16px;
+  }
+  #grid-container #education .line-container .line .circle1 {
+    left: 2%;
+  }
+  #grid-container #education .line-container .line .circle1 > .job {
+    top: -28px;
+    left: -50px;
+  }
+  #grid-container #education .line-container .line .circle1 > .year {
+    top: 30px;
+  }
+  #grid-container #education .line-container .line .circle1 .job {
+    width: 130px;
+  }
+  #grid-container #education .line-container .line .circle2 {
+    left: 18%;
+  }
+  #grid-container #education .line-container .line .circle2 > .job {
+    top: 30px;
+    left: -90px;
+  }
+  #grid-container #education .line-container .line .circle2 > .year {
+    top: -30px;
+  }
+  #grid-container #education .line-container .line .circle2 .job {
+    width: 220px;
+  }
+  #grid-container #education .line-container .line .circle3 {
+    left: 38%;
+  }
+  #grid-container #education .line-container .line .circle3 > .job {
+    top: -28px;
+    left: -90px;
+  }
+  #grid-container #education .line-container .line .circle3 > .year {
+    top: 30px;
+  }
+  #grid-container #education .line-container .line .circle3 .job {
+    width: 220px;
+  }
+  #grid-container #education .line-container .line .circle4 {
+    left: 56%;
+  }
+  #grid-container #education .line-container .line .circle4 > .job {
+    top: 30px;
+    left: -115px;
+  }
+  #grid-container #education .line-container .line .circle4 > .year {
+    top: -30px;
+  }
+  #grid-container #education .line-container .line .circle4 .job {
+    width: 280px;
+  }
+  #grid-container #education .line-container .line .circle5 {
+    left: 76%;
+  }
+  #grid-container #education .line-container .line .circle5 > .job {
+    top: -28px;
+    left: -50px;
+  }
+  #grid-container #education .line-container .line .circle5 > .year {
+    top: 30px;
+  }
+  #grid-container #education .line-container .line .circle5 .job {
+    width: fit-content;
+  }
+  #grid-container #education .line-container .line .circle6 {
+    left: 96%;
+  }
+  #grid-container #education .line-container .line .circle6 > .job {
+    top: 30px;
+    left: -135px;
+  }
+  #grid-container #education .line-container .line .circle6 > .year {
+    top: -30px;
+  }
+  #grid-container #education .line-container .line .circle6 .job {
+    width: 235px;
   }
 }
 @media screen and (min-width: 2100px) and (max-width: 2560px) {
@@ -697,5 +1066,115 @@ html {
   }
   #grid-container #header .about-container #button input:checked ~ .frame-container {
     top: 200px;
+  }
+  #grid-container #education {
+    padding-bottom: 0;
+  }
+  #grid-container #education .line-container .line {
+    height: 5px;
+    /* Things in common 2 */
+    /*---------- point 1: Middle School ---------*/
+    /*---------- point 2: High School ---------*/
+    /*---------- point 3: Teacher Assistent ---------*/
+    /*---------- point 4: Motor vehicle assembler ---------*/
+    /*---------- point 5: Warehouse Worker ---------*/
+    /*---------- point 6: Chasacademy Student ---------*/
+  }
+  #grid-container #education .line-container .line .circle1, #grid-container #education .line-container .line .circle2, #grid-container #education .line-container .line .circle3, #grid-container #education .line-container .line .circle4, #grid-container #education .line-container .line .circle5, #grid-container #education .line-container .line .circle6 {
+    position: absolute;
+    right: -6px;
+    background-color: #c4ffcb;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    z-index: -1;
+    top: -8px;
+  }
+  #grid-container #education .line-container .line .circle1 .job, #grid-container #education .line-container .line .circle2 .job, #grid-container #education .line-container .line .circle3 .job, #grid-container #education .line-container .line .circle4 .job, #grid-container #education .line-container .line .circle5 .job, #grid-container #education .line-container .line .circle6 .job {
+    font-size: 2.1rem;
+    text-align: center;
+    position: absolute;
+  }
+  #grid-container #education .line-container .line .circle1 .year, #grid-container #education .line-container .line .circle2 .year, #grid-container #education .line-container .line .circle3 .year, #grid-container #education .line-container .line .circle4 .year, #grid-container #education .line-container .line .circle5 .year, #grid-container #education .line-container .line .circle6 .year {
+    font-size: 1.9rem;
+    right: 16px;
+  }
+  #grid-container #education .line-container .line .circle1 {
+    left: 2%;
+  }
+  #grid-container #education .line-container .line .circle1 > .job {
+    top: -30px;
+    left: -60px;
+  }
+  #grid-container #education .line-container .line .circle1 > .year {
+    top: 30px;
+  }
+  #grid-container #education .line-container .line .circle1 .job {
+    width: 150px;
+  }
+  #grid-container #education .line-container .line .circle2 {
+    left: 18%;
+  }
+  #grid-container #education .line-container .line .circle2 > .job {
+    top: 30px;
+    left: -93px;
+  }
+  #grid-container #education .line-container .line .circle2 > .year {
+    top: -30px;
+  }
+  #grid-container #education .line-container .line .circle2 .job {
+    width: 230px;
+  }
+  #grid-container #education .line-container .line .circle3 {
+    left: 38%;
+  }
+  #grid-container #education .line-container .line .circle3 > .job {
+    top: -30px;
+    left: -96px;
+  }
+  #grid-container #education .line-container .line .circle3 > .year {
+    top: 30px;
+  }
+  #grid-container #education .line-container .line .circle3 .job {
+    width: 235px;
+  }
+  #grid-container #education .line-container .line .circle4 {
+    left: 56%;
+  }
+  #grid-container #education .line-container .line .circle4 > .job {
+    top: 30px;
+    left: -125px;
+  }
+  #grid-container #education .line-container .line .circle4 > .year {
+    top: -30px;
+  }
+  #grid-container #education .line-container .line .circle4 .job {
+    width: 320px;
+  }
+  #grid-container #education .line-container .line .circle5 {
+    left: 76%;
+  }
+  #grid-container #education .line-container .line .circle5 > .job {
+    top: -30px;
+    left: -50px;
+  }
+  #grid-container #education .line-container .line .circle5 > .year {
+    top: 30px;
+  }
+  #grid-container #education .line-container .line .circle5 .job {
+    width: fit-content;
+  }
+  #grid-container #education .line-container .line .circle6 {
+    left: 96%;
+  }
+  #grid-container #education .line-container .line .circle6 > .job {
+    top: 30px;
+    left: -120px;
+  }
+  #grid-container #education .line-container .line .circle6 > .year {
+    top: -30px;
+  }
+  #grid-container #education .line-container .line .circle6 .job {
+    width: 260px;
   }
 }

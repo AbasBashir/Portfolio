@@ -275,33 +275,166 @@ html{
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
     }
 
+    #education{
+        grid-area: education;
+        padding-bottom: 50px;
 
+        .main-title{
+            text-align: center;
+            padding-top: 30px;
+            font-size: 3rem;
+            padding-bottom: 40px;
+            color: $primary-color;
+        }
+
+        .line-container{
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+
+            
+            .line{
+                position: relative;
+                background-color: $light-green;
+                width: 3px;
+                height: 550px;
+                margin: 0 auto;
+                border-radius: 10px;
+                z-index: -1;
+                
+                /// Things in common 1
+                 .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
+                    @include circle;
+    
+                }
+
+                // Things in common 2 
+                .circle1::before, .circle2::before, .circle3::before, .circle4::before, .circle5::before, .circle6::before {
+                    @include circle-pseudo-before;
+                }
+    
+                // Things in common 3 
+                .job{
+                    position: absolute;
+                    width: 30vw;
+                    min-width: 120px;
+                    left: 20px;
+                    font-size: 1.5rem;
+                    color: #000000;
+                    font-weight: 600;
+                    z-index: -1;
+                }
+
+                // point 1: Middle School 
+
+                 .circle1{
+                    top: 25px;
+
+                    .year{
+                        display: none;
+                    }
+
+                    &::before{
+                        content: '2008' ;
+                    }
+                }
+
+
+                // point 2: High School 
+
+                 .circle2{
+                    top: 100px;
+
+                    .year{
+                        display: none;
+                    }
+
+                    &::before{
+                        content: '2013' ;
+                    }
+    
+                }
+
+                
+                // point 3: Teacher Assistent
+
+                .circle3{
+                    top: 180px;
+
+                    .year{
+                        display: none;
+                    }
+                    
+                    &::before{
+                        content: '2016' ;
+                    }
+    
+                }
+
+                // point 4: Motor vehicle assembler
+
+                 .circle4{
+                    top: 265px;
+
+                    .year{
+                        display: none;
+                    }
+    
+                    &::before{
+                        content: '2018' ;
+                    }
+                }
+
+                // point 5: Warehouse Worker
+
+                 .circle5{
+                    top: 365px;
+
+                    .year{
+                        display: none;
+                    }
+
+                                        
+                    .job{
+                        overflow-wrap: break-word;
+                    }
+
+    
+    
+                    &::before{
+                        content: '2021' ;
+                    }
+                }
+
+                // point 6: Chasacademy Student
+
+
+                .circle6{
+                    top: 455px;
+
+                    .year{
+                        display: none;
+                    }
+                    
+                    
+                    .job{
+                        word-wrap: break-word;
+
+                    }
+
+                     &::before{
+                        content: '2023' ;
+                    }
+                }
+
+            }
+
+
+        }
+
+    }
 
 
 

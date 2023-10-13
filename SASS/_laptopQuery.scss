@@ -85,6 +85,65 @@
     
             
         }
+
+        //------------- EDUCATION -------------
+        #education {
+            grid-area: education;
+
+
+            .main-title{
+                font-size: 3.5rem;
+            }
+            
+            .line-container{
+
+                .line{
+
+                    /* Things in common 2 */
+                    .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
+
+                        .job{
+                            font-size: 2rem;
+
+                        }
+
+                        .year {
+                            font-size: 1.8rem;
+                        }
+
+                    }
+
+                  // point 5: Warehouse Worker
+                 .circle5{
+                                        
+                    .job{
+                        overflow-wrap: unset;
+                    }
+
+                }
+
+                // point 6: Chasacademy Student
+                .circle6{
+                    
+                    .job{
+                        word-wrap: unset;
+
+                    }
+
+                }
+
+                }
+            }  
+    
+        }
+
+
+
+
+
+
+
+    
     }
 
 
@@ -205,19 +264,132 @@
     
             }
 
-
-
-
-            
-
         }
+
+
+        //------------- EDUCATION -------------
+        #education {
+            grid-area: education;
+            // height: unset; 
+
+
+            .main-title{
+                font-size: 3.5rem;
+                // padding-top: 20px;
+                // padding-bottom: 60px;
+            }
+            
+            .line-container{
+                width: 100%;
+                height: 72%;
+                margin: 0;
+
+                .line{
+                    top: 50px;
+                    width: 90%;
+                    // left: -10px;
+                    height: 3px;
+                    
+                    
+                    /* Things in common 1 */
+                    .circle1::before, .circle2::before, .circle3::before, .circle4::before, .circle5::before, .circle6::before {
+                        display: none;
+                    }
+                                
+                    /* Things in common 2 */
+                    .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
+                        @include circle;
+                        top: -6px;
+                        
+                        .job{
+                            font-size: 1.8rem;
+                            text-align: center;
+                            position: absolute;
+                        }
+
+                        .year {
+                            display: block;
+                            position: relative;
+                            font-weight: bolder;
+                            font-size: 1.8rem;
+                            right: 14px;
+                            color: $primary-color;
+                        }
+
+                    }
+
+                        
+                    /*---------- point 1: Middle School ---------*/
+                    .circle1{
+                        @include education-circle-text(2%, -28px, -50px, 30px);
+
+                        .job{
+                            width: 130px;
+                        }
+
+                    }
+
+                    /*---------- point 2: High School ---------*/
+                    .circle2{
+                        @include education-circle-text(20%, 25px, -45px, -30px);
+
+                        .job{
+                            width: 109px;
+                        }
+                    }
+
+                    /*---------- point 3: Teacher Assistent ---------*/
+                    .circle3{
+                        @include education-circle-text(38%, -42px, -40px, 30px);
+
+                        .job{
+                            width: fit-content;
+                        }
+
+                    }
+
+                    /*---------- point 4: Motor vehicle assembler ---------*/
+                    .circle4{
+                        @include education-circle-text(56%, 25px, -62px, -30px);
+
+                        .job{
+                            width: 160px;
+                        }
+                    }
+
+                    /*---------- point 5: Warehouse Worker ---------*/
+                    .circle5{
+                        @include education-circle-text(76%, -30px, -50px, 30px);
+
+                        .job{
+                            width: fit-content;
+                        }
+                    }
+                    
+                    /*---------- point 6: Chasacademy Student ---------*/
+
+                    .circle6{
+                        @include education-circle-text(96%, 25px, -74px, -30px);
+
+                        .job{
+                            width: fit-content;
+                        }
+                    }
+
+                }
+            }  
+    
+        }
+    
+
+        
 
     }
 
 }
 
 
-// contact-container
+// contact-container + education
 @media screen and (min-width: 1570px){
 
     #grid-container{
@@ -277,6 +449,113 @@
             }
     
         }
+
+        //------------- EDUCATION -------------
+        #education {
+
+            .line-container{
+
+                .line{
+                    height: 5px;
+                                
+                    /* Things in common 2 */
+                    .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
+                        @include circle2;
+                        top: -8px;
+                        
+                        .job{
+                            font-size: 1.9rem;
+                            text-align: center;
+                            position: absolute;
+                        }
+
+                        .year {
+                            font-size: 1.9rem;
+                            right: 16px;
+                        }
+
+                    }
+
+                        
+                    /*---------- point 1: Middle School ---------*/
+                    .circle1{
+                        @include education-circle-text(2%, -28px, -50px, 30px);
+
+                        .job{
+                            width: 130px;
+                        }
+
+                    }
+
+                    /*---------- point 2: High School ---------*/
+                    .circle2{
+                        @include education-circle-text(18%, 30px, -90px, -30px);
+
+                        .job{
+                            width: 220px;
+                        }
+                    }
+
+                    /*---------- point 3: Teacher Assistent ---------*/
+                    .circle3{
+                        @include education-circle-text(38%, -28px, -90px, 30px);
+
+                        .job{
+                            width: 220px;
+                        }
+
+                    }
+
+                    /*---------- point 4: Motor vehicle assembler ---------*/
+                    .circle4{
+                        @include education-circle-text(56%, 30px, -115px, -30px);
+
+                        .job{
+                            width: 280px;
+                        }
+                    }
+
+                    /*---------- point 5: Warehouse Worker ---------*/
+                    .circle5{
+                        @include education-circle-text(76%, -28px, -50px, 30px);
+
+                        .job{
+                            width: fit-content;
+                        }
+                    }
+                    
+                    /*---------- point 6: Chasacademy Student ---------*/
+
+                    .circle6{
+                        @include education-circle-text(96%, 30px, -135px, -30px);
+
+                        .job{
+                            width: 235px;
+                        }
+                    }
+
+                }
+            }  
+    
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 
@@ -445,5 +724,103 @@
 
 
         }
+
+
+
+
+
+
+        //------------- EDUCATION -------------
+        #education {
+            padding-bottom: 0;
+
+
+            .line-container{
+
+                .line{
+                    height: 5px;
+                                
+                    /* Things in common 2 */
+                    .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
+                        @include circle2;
+                        top: -8px;
+                        
+                        .job{
+                            font-size: 2.1rem;
+                            text-align: center;
+                            position: absolute;
+                        }
+
+                        .year {
+                            font-size: 1.9rem;
+                            right: 16px;
+                        }
+
+                    }
+
+                        
+                    /*---------- point 1: Middle School ---------*/
+                    .circle1{
+                        @include education-circle-text(2%, -30px, -60px, 30px);
+
+                        .job{
+                            width: 150px;
+                        }
+
+                    }
+
+                    /*---------- point 2: High School ---------*/
+                    .circle2{
+                        @include education-circle-text(18%, 30px, -93px, -30px);
+
+                        .job{
+                            width: 230px;
+                        }
+                    }
+
+                    /*---------- point 3: Teacher Assistent ---------*/
+                    .circle3{
+                        @include education-circle-text(38%, -30px, -96px, 30px);
+
+                        .job{
+                            width: 235px;
+                        }
+
+                    }
+
+                    /*---------- point 4: Motor vehicle assembler ---------*/
+                    .circle4{
+                        @include education-circle-text(56%, 30px, -125px, -30px);
+
+                        .job{
+                            width: 320px;
+                        }
+                    }
+
+                    /*---------- point 5: Warehouse Worker ---------*/
+                    .circle5{
+                        @include education-circle-text(76%, -30px, -50px, 30px);
+
+                        .job{
+                            width: fit-content;
+                        }
+                    }
+                    
+                    /*---------- point 6: Chasacademy Student ---------*/
+
+                    .circle6{
+                        @include education-circle-text(96%, 30px, -120px, -30px);
+
+                        .job{
+                            width: 260px;
+                        }
+                    }
+
+                }
+            }  
+    
+        }
+
+        
     }
 }
