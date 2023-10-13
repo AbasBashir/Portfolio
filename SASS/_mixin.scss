@@ -1,0 +1,188 @@
+@mixin  mobile-contact-container {
+
+      padding-bottom: 25px;
+    
+      h3 {
+        color: $light-green;
+        font-size: 2.4rem;
+        text-align: left;
+        padding-left: 5px;
+        margin-bottom: 20px;
+      }
+    
+      .socialMedia-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-left: 10px;
+    
+        .phone-icon, .gmail-icon, .github-icon, .linkedin-icon {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+    
+          img {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+          }
+    
+          a {
+            color: $lighter-green;
+            font-size: 2rem;
+          }
+
+        }
+
+        .gmail-icon{
+
+            a {
+              order: 2; 
+            }
+
+            img {
+              order: 1;
+            }
+        }
+
+        .linkedin-icon{
+
+            a {
+              order: 2; 
+            }
+
+            img {
+              order: 1;
+            }
+      }
+      
+
+      }
+
+}
+
+@mixin  mobile-2-contact-container {
+
+    h3 {
+        font-size: 2.5rem;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .socialMedia-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+        .gmail-icon{
+
+          a {
+            order: 1; 
+            margin-right: 10px;
+          }
+
+          img {
+            order: 2;
+          }
+
+        }
+
+      .linkedin-icon{
+
+          a {
+            order: 1; 
+            margin-right: 10px;
+
+          }
+
+          img {
+            order: 2;
+          }
+      }
+
+
+    }
+
+}
+
+@mixin  laptop-swap-icon {
+
+    .github-icon{
+      order: 2;
+
+    }
+
+    .gmail-icon{
+      order: 2;
+
+    }
+
+  .linkedin-icon{
+      order: 1;
+      a {
+        order: 1; 
+        margin-right: 10px;
+
+      }
+
+      img {
+        order: 2;
+      }
+  }
+
+  .github-icon{
+    a {
+      order: 1; 
+      margin-right: 10px;
+
+    }
+
+    img {
+      order: 2;
+    }
+}
+
+}
+
+
+@mixin  laptop-contact-container {
+
+
+  h3 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .socialMedia-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0;
+    margin: 0 10px;
+
+    .phone-icon, .gmail-icon, .github-icon, .linkedin-icon {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      img {
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+      }
+
+      a {
+        font-size: 2.3rem;
+      }
+
+    }
+
+    @include laptop-swap-icon;
+
+  }
+
+}
+
+

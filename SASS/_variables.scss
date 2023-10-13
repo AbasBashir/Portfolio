@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'LED Dot-Matrix', sans-serif; 
+    src: url('/SASS/matrix.ttf'); 
+  }
+
+$primary-color: #008F11; 
+$light-green: #4fc65d;
+$button-color: #4fc65d;
+// $profile-border-color: 2px solid #000000;
+$button-border: 4px solid #008F11;
+$th-background-color: #5fd06c;
+$lighter-green: #c4ffcb;
+$font-stack: 'LED Dot-Matrix', sans-serif;
+$box-shadow-stack: 0 0px 10px 0 $primary-color inset;
+$skill-bar-background-color: rgba(147, 225, 157, 0.5);
+$skill-bar-color: $light-green; 

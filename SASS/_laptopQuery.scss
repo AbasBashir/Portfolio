@@ -1,0 +1,449 @@
+// Screen adaptation for header + highlights
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+
+    #grid-container{
+
+
+        #header{
+
+            .brand-container{
+                width: 80%;
+                max-width: unset;
+        
+                .brand-logo-container{
+
+                    width: fit-content;
+        
+                    img{
+                        width: 85px;
+                        height: 85px;
+                        
+                    }
+        
+                            
+                    .brand-name{
+                        font-size: calc(2rem + 1vw);
+                    }
+        
+                }
+        
+        
+                .occupation{
+                    width: calc(65% + 0.5vw);
+                    font-size: calc(1.4rem + 1vw);
+                    top: 110px;
+                }
+        
+            }
+
+
+
+            .about-container{
+
+                .about{
+
+                    width: calc(90% + 1vw) ;
+                    margin: 0 auto;
+
+                    h1{
+                        font-size: calc(2.2rem + 1vw);
+                    }
+                    
+                    p{
+                        font-size: calc(0.8rem + 1vw);
+                    }
+                    
+                }
+
+                #button{
+
+                    margin-top: 30px;
+
+                    .youtube-btn{
+
+                        height: 40px;
+                        width: 200px;
+            
+                        .label-check {
+
+                            font-size: 1.8rem;
+                        }
+                        
+                    }
+            
+                    .frame-container{
+                        padding-bottom: 50.625%; 
+                    }
+            
+                    input:checked ~ .frame-container{
+                        top: 580px;
+                    }
+                } 
+
+                
+            }
+    
+            
+        }
+    }
+
+
+
+
+}
+
+
+
+
+// laptop size 1024px
+@media screen and (min-width: 1024px){
+
+    #grid-container{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1.5fr 2fr 1fr 1fr;
+        grid-template-areas: 
+                            "header education"
+                            "header highlights"
+                            "header skills"
+                            "header hobby";
+
+
+        //------------- EDUCATION -------------
+        #header{
+
+            grid-area: header;
+            height: 100%;
+
+            .brand-container{
+                padding-top: 8px;
+                top: -45vh; //change to -870px
+
+
+
+                .brand-logo-container{
+                    
+                    img{
+                        width: 70px;
+                        height: 70px;
+                    }
+        
+                            
+                    .brand-name{
+                        font-size: 2.7rem;
+                    }
+    
+                }
+    
+    
+                .occupation{
+                    font-size: 1.8rem;
+                    top: 85px;
+
+                }
+    
+            }
+
+
+            //hide hamburger menu
+            .checkbox-container{
+                display: none;
+            }
+        
+            //hide nav menu
+            .menu-items{
+                display: none;
+            }
+
+
+            .about-container{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 70%;
+                bottom: 0;
+                width: 100%;
+    
+    
+                .about{
+                    position: relative;
+                    top: 80px;
+
+                    h1{
+                        font-size: 2.8rem;
+                    }
+                    
+                    p{
+                        font-size: 1.5rem;
+                    }
+                    
+                }
+    
+                .contact-container{
+
+                    @include mobile-contact-container;
+
+                        h3 {
+                            font-size: 2.4rem;
+                            text-align: left;
+                        }
+                }
+                
+                #button{
+
+                    .frame-container{
+                        left: 37%;
+                        width: 60%;
+                        padding-bottom: 50.625%; 
+                    }
+            
+                    input:checked ~ .frame-container{
+                        top: 350px;
+                    }
+                } 
+    
+            }
+
+
+
+
+            
+
+        }
+
+    }
+
+}
+
+
+// contact-container
+@media screen and (min-width: 1570px){
+
+    #grid-container{
+
+        #header{
+
+            .about-container{
+    
+                .contact-container{
+        
+                    @include laptop-contact-container;
+    
+                    .socialMedia-container {
+                        flex-direction: column;
+    
+                        .github-icon{
+                            a {
+                              order: 2; 
+                              margin-right: 10px;
+                        
+                            }
+                        
+                            img {
+                              order: 1;
+                            }
+                        }
+
+                        .linkedin-icon{
+                            order: 3;
+                            margin-right: 0;
+                            a {
+                              order: 2; 
+                              margin-right: 10px;
+                        
+                            }
+                        
+                            img {
+                              order: 1;
+                            }
+                        }
+                    }
+        
+                }
+
+                .about{
+        
+                    h1{
+                        font-size: 3rem;
+                    }
+                    
+                    p{
+                        font-size: 1.6rem;
+                    }
+                    
+                }
+        
+            }
+    
+        }
+    }
+
+
+}
+
+
+
+// Tweak brand-logo
+@media screen and (min-width: 2100px) and (max-width: 2560px) {
+
+    /*---------- Main Table Article ---------*/
+    #grid-container{
+
+        #header{
+
+            .brand-container{
+                width: 100%;
+                padding: 0;
+
+                .brand-logo-container{
+                    justify-content: space-evenly;
+                    width: 100%;
+
+                    img{
+                        width: 80px;
+                        height: 80px;
+                    }
+        
+                            
+                    .brand-name{
+                        font-size: 3rem;
+                        padding-bottom: 5px;
+                    }
+
+                }
+
+                .occupation{
+                    font-size: 2.1rem;
+                    top: 85px;
+                }
+            }
+
+
+        }
+
+        
+    }
+
+}
+
+
+//L-laptop screen
+@media screen and (min-width: 2560px){
+
+    #grid-container{
+
+        #header{
+
+            .brand-container{
+                width: 70%;
+                max-width: unset;
+                top: -45vh;
+    
+                .brand-logo-container{
+                    border-bottom: 1px solid $light-green;
+                    padding-bottom: 8px;
+                    
+
+                    img{
+                        width: 80px;
+                        height: 80px;
+                        margin: 0 -20px;
+                    }
+        
+                            
+                    .brand-name{
+                        font-size: 3rem;
+                        align-self: flex-end;
+                        padding-bottom: 5px;
+                    }
+    
+                }
+    
+    
+                .occupation{
+                    font-size: 2rem;
+                    font-weight: 600;
+                    top: 90px;
+                    border: none;
+                }
+    
+            }
+
+            .about-container{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 70%;
+                bottom: 0;
+                width: 100%;
+    
+    
+                .about{
+
+                    h1{
+
+                        font-size: 3.5rem;
+                        margin-bottom: 20px;
+                    }
+                    
+                    p{
+                        font-size: 1.9rem;
+                    }
+                    
+                }
+    
+                .contact-container{
+                    @include laptop-contact-container;
+
+                    .socialMedia-container {
+                    
+                        .github-icon, .linkedin-icon {
+
+                          img {
+                                margin-right: 0;
+                          }
+
+                        }
+                    
+                      }
+
+                }
+
+                #button{
+
+                    margin-top: 20px;
+
+                    .youtube-btn{
+
+                        height: 50px;
+                        width: 260px;
+            
+                        .label-check {
+
+                            font-size: 2rem;
+                        }
+                        
+                    }
+            
+                    .frame-container{
+                        left: 40%;
+                        width: 50%;
+                        padding-bottom: 30.625%; 
+                    }
+            
+                    input:checked ~ .frame-container{
+                        top: 200px;
+                    }
+
+                } 
+
+    
+            }
+
+
+
+        }
+    }
+}

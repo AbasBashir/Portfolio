@@ -1,0 +1,171 @@
+// // adapting to iphone 12 pro 
+// @media screen and (max-width: 390px){
+
+//     #header{
+//         height: 100vh;
+    
+//     }
+
+
+// }
+
+
+
+
+
+/*contact adaptation*/
+@media screen and (min-width: 650px) and (max-width: 1024px) {
+
+    #header{
+
+        .about-container{
+            width: 100%;
+            
+            .contact-container{
+            @include mobile-2-contact-container;
+
+            }
+
+        }
+    
+
+    }
+
+}
+
+// swaping icon position
+@media screen and (min-width: 710px){
+
+    #header{
+
+        .about-container{
+
+            
+            .contact-container{
+
+
+                .socialMedia-container{
+
+                    .gmail-icon{
+
+                        a {
+                          order: 2; 
+                          margin-right: 0;
+                        }
+                
+                        img {
+                          order: 1;
+                        }
+                
+                    }
+                
+                    .linkedin-icon{
+                      a {
+                        order: 2; 
+                        margin-right: 0;
+                
+                      }
+                
+                      img {
+                        order: 1;
+                      }
+                    }
+
+                }
+
+            }
+
+        }
+    
+
+    }
+
+
+}
+
+// tweaking social-media container
+@media screen and (min-width: 706px) and (max-width: 880px){
+
+    #header{
+
+        .about-container{
+
+            
+            .contact-container{
+
+
+                .socialMedia-container{
+
+                    .phone-icon{
+                        width: 40%;
+                    }
+                    
+                    .github-icon{
+                        width: 40%;
+                    }
+                    
+                    .gmail-icon{
+
+                        a {
+                            order: 1; 
+                            margin-right: 15px;
+                          }
+                  
+                          img {
+                            order: 2;
+                          }
+                    }
+
+                    .linkedin-icon{
+                        a {
+                            order: 1; 
+                            margin-right: 15px;
+                    
+                          }
+                    
+                          img {
+                            order: 2;
+                          }
+                    }
+
+                }
+
+            }
+
+        }
+    
+
+    }
+
+
+}
+
+
+@media screen and (min-width: 910px){
+
+    #header{
+
+        .about-container{
+
+            
+            .contact-container{
+
+
+                .socialMedia-container{
+
+                
+                    .linkedin-icon{
+                        margin-right: 10px;
+
+                    }
+
+                }
+
+            }
+
+        }
+    
+
+    }
+
+}

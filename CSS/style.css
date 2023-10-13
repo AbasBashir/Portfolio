@@ -1,0 +1,701 @@
+@font-face {
+  font-family: "LED Dot-Matrix", sans-serif;
+  src: url("/SASS/matrix.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "LED Dot-Matrix", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#grid-container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr) 0.2fr;
+  grid-template-areas: "header" "education" "highlights" "skills" "hobby";
+  /*contact adaptation*/
+}
+#grid-container #header {
+  grid-area: header;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/img/background-intro.webp);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+#grid-container #header .brand-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 20px 0;
+  width: 90%;
+  max-width: 400px;
+  top: -30vh;
+}
+#grid-container #header .brand-container .brand-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 300px;
+  justify-content: center;
+}
+#grid-container #header .brand-container .brand-logo-container img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin: 0 20px;
+}
+#grid-container #header .brand-container .brand-logo-container .brand-name {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #4fc65d;
+  padding-bottom: 10px;
+  align-self: flex-end;
+}
+#grid-container #header .brand-container .occupation {
+  position: absolute;
+  top: 93px;
+  padding-top: 15px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: #4fc65d;
+  border-top: 2px solid #4fc65d;
+  font-weight: 600;
+}
+#grid-container #header nav .menu-items {
+  position: absolute;
+  display: flex;
+  background-color: rgba(10, 13, 25, 0.8);
+  padding-top: 10px;
+  right: 25vw;
+  flex-direction: column;
+  width: 200px;
+  top: -250px;
+  transition: 0.8s ease-in-out;
+  z-index: 2;
+}
+#grid-container #header nav .menu-items a {
+  display: inline-block;
+  color: #4fc65d;
+  width: 100%;
+  text-align: center;
+  font-size: 2.2rem;
+  cursor: pointer;
+  padding: 10px 0;
+}
+#grid-container #header nav .menu-items a:hover {
+  box-shadow: 0 -2px 20px 0 #008F11 inset;
+  color: rgb(255, 255, 255);
+}
+#grid-container #header .checkbox-container {
+  position: absolute;
+  right: 15px;
+  padding: 22px;
+  top: 9px;
+}
+#grid-container #header .checkbox-container .number-1 {
+  color: #4fc65d;
+  position: absolute;
+  right: 28px;
+  font-size: 3.5rem;
+  top: 10px;
+  transition: 0.8s ease-in-out;
+}
+#grid-container #header .checkbox-container .number-2 {
+  color: #4fc65d;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 3.5rem;
+  transform: scaleX(-1);
+  transition: 0.8s ease-in-out;
+}
+#grid-container #header .dropdown-menu {
+  position: absolute;
+  top: 30px;
+  right: 37px;
+  opacity: 0;
+  cursor: pointer;
+}
+#grid-container #header .dropdown-menu:checked ~ .checkbox-container > .number-1 {
+  transform: rotate(90deg);
+  top: 1px;
+  right: 15px;
+  transition: 0.8s ease-in-out;
+}
+#grid-container #header .dropdown-menu:checked ~ .checkbox-container > .number-2 {
+  transform: rotate(270deg);
+  top: 15px;
+  right: 13px;
+  transition: 0.8s ease-in-out;
+}
+#grid-container #header .dropdown-menu:checked ~ nav > .menu-items {
+  top: 0;
+  transition: 0.8s ease-in-out;
+}
+#grid-container #header .about-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 25px;
+}
+#grid-container #header .about-container .about {
+  text-align: center;
+}
+#grid-container #header .about-container .about h1 {
+  color: #4fc65d;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+#grid-container #header .about-container .about p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin: 0 5px;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #c4ffcb;
+}
+#grid-container #header .about-container #button {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+#grid-container #header .about-container #button .youtube-btn {
+  border: 4px solid #008F11;
+  background-color: #4fc65d;
+  height: 40px;
+  border-radius: 10px;
+  width: 180px;
+}
+#grid-container #header .about-container #button .youtube-btn .label-check {
+  position: relative;
+  display: inline-block;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+#grid-container #header .about-container #button .frame-container {
+  position: fixed;
+  top: -1200px;
+  left: 5%;
+  width: 90%;
+  padding-bottom: 55.625%;
+  transition: 0.8s ease-in-out;
+}
+#grid-container #header .about-container #button .frame-container .responsive-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  z-index: 99999;
+}
+#grid-container #header .about-container #button .checked {
+  display: none;
+}
+#grid-container #header .about-container #button input:checked ~ .frame-container {
+  top: 190px;
+  transition: 0.8s ease-in-out;
+}
+#grid-container #header .about-container h3 {
+  color: #4fc65d;
+  font-size: 2.4rem;
+  text-align: left;
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+#grid-container #header .about-container .socialMedia-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-left: 10px;
+}
+#grid-container #header .about-container .socialMedia-container .phone-icon, #grid-container #header .about-container .socialMedia-container .gmail-icon, #grid-container #header .about-container .socialMedia-container .github-icon, #grid-container #header .about-container .socialMedia-container .linkedin-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#grid-container #header .about-container .socialMedia-container .phone-icon img, #grid-container #header .about-container .socialMedia-container .gmail-icon img, #grid-container #header .about-container .socialMedia-container .github-icon img, #grid-container #header .about-container .socialMedia-container .linkedin-icon img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+#grid-container #header .about-container .socialMedia-container .phone-icon a, #grid-container #header .about-container .socialMedia-container .gmail-icon a, #grid-container #header .about-container .socialMedia-container .github-icon a, #grid-container #header .about-container .socialMedia-container .linkedin-icon a {
+  color: #c4ffcb;
+  font-size: 2rem;
+}
+#grid-container #header .about-container .socialMedia-container .gmail-icon a {
+  order: 2;
+}
+#grid-container #header .about-container .socialMedia-container .gmail-icon img {
+  order: 1;
+}
+#grid-container #header .about-container .socialMedia-container .linkedin-icon a {
+  order: 2;
+}
+#grid-container #header .about-container .socialMedia-container .linkedin-icon img {
+  order: 1;
+}
+@media screen and (min-width: 650px) and (max-width: 1024px) {
+  #grid-container #header .about-container {
+    width: 100%;
+  }
+  #grid-container #header .about-container .contact-container h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-left: 0;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon a {
+    order: 1;
+    margin-right: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon img {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon a {
+    order: 1;
+    margin-right: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon img {
+    order: 2;
+  }
+}
+@media screen and (min-width: 710px) {
+  #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon a {
+    order: 2;
+    margin-right: 0;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon img {
+    order: 1;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon a {
+    order: 2;
+    margin-right: 0;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon img {
+    order: 1;
+  }
+}
+@media screen and (min-width: 706px) and (max-width: 880px) {
+  #grid-container #header .about-container .contact-container .socialMedia-container .phone-icon {
+    width: 40%;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .github-icon {
+    width: 40%;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon a {
+    order: 1;
+    margin-right: 15px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon img {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon a {
+    order: 1;
+    margin-right: 15px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon img {
+    order: 2;
+  }
+}
+@media screen and (min-width: 910px) {
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+  #grid-container #header .brand-container {
+    width: 80%;
+    max-width: unset;
+  }
+  #grid-container #header .brand-container .brand-logo-container {
+    width: fit-content;
+  }
+  #grid-container #header .brand-container .brand-logo-container img {
+    width: 85px;
+    height: 85px;
+  }
+  #grid-container #header .brand-container .brand-logo-container .brand-name {
+    font-size: calc(2rem + 1vw);
+  }
+  #grid-container #header .brand-container .occupation {
+    width: calc(65% + 0.5vw);
+    font-size: calc(1.4rem + 1vw);
+    top: 110px;
+  }
+  #grid-container #header .about-container .about {
+    width: calc(90% + 1vw);
+    margin: 0 auto;
+  }
+  #grid-container #header .about-container .about h1 {
+    font-size: calc(2.2rem + 1vw);
+  }
+  #grid-container #header .about-container .about p {
+    font-size: calc(0.8rem + 1vw);
+  }
+  #grid-container #header .about-container #button {
+    margin-top: 30px;
+  }
+  #grid-container #header .about-container #button .youtube-btn {
+    height: 40px;
+    width: 200px;
+  }
+  #grid-container #header .about-container #button .youtube-btn .label-check {
+    font-size: 1.8rem;
+  }
+  #grid-container #header .about-container #button .frame-container {
+    padding-bottom: 50.625%;
+  }
+  #grid-container #header .about-container #button input:checked ~ .frame-container {
+    top: 580px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1.5fr 2fr 1fr 1fr;
+    grid-template-areas: "header education" "header highlights" "header skills" "header hobby";
+  }
+  #grid-container #header {
+    grid-area: header;
+    height: 100%;
+  }
+  #grid-container #header .brand-container {
+    padding-top: 8px;
+    top: -45vh;
+  }
+  #grid-container #header .brand-container .brand-logo-container img {
+    width: 70px;
+    height: 70px;
+  }
+  #grid-container #header .brand-container .brand-logo-container .brand-name {
+    font-size: 2.7rem;
+  }
+  #grid-container #header .brand-container .occupation {
+    font-size: 1.8rem;
+    top: 85px;
+  }
+  #grid-container #header .checkbox-container {
+    display: none;
+  }
+  #grid-container #header .menu-items {
+    display: none;
+  }
+  #grid-container #header .about-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+    bottom: 0;
+    width: 100%;
+  }
+  #grid-container #header .about-container .about {
+    position: relative;
+    top: 80px;
+  }
+  #grid-container #header .about-container .about h1 {
+    font-size: 2.8rem;
+  }
+  #grid-container #header .about-container .about p {
+    font-size: 1.5rem;
+  }
+  #grid-container #header .about-container .contact-container {
+    padding-bottom: 25px;
+  }
+  #grid-container #header .about-container .contact-container h3 {
+    color: #4fc65d;
+    font-size: 2.4rem;
+    text-align: left;
+    padding-left: 5px;
+    margin-bottom: 20px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .phone-icon, #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon, #grid-container #header .about-container .contact-container .socialMedia-container .github-icon, #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .phone-icon img, #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon img, #grid-container #header .about-container .contact-container .socialMedia-container .github-icon img, #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .phone-icon a, #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon a, #grid-container #header .about-container .contact-container .socialMedia-container .github-icon a, #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon a {
+    color: #c4ffcb;
+    font-size: 2rem;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon a {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon img {
+    order: 1;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon a {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon img {
+    order: 1;
+  }
+  #grid-container #header .about-container .contact-container h3 {
+    font-size: 2.4rem;
+    text-align: left;
+  }
+  #grid-container #header .about-container #button .frame-container {
+    left: 37%;
+    width: 60%;
+    padding-bottom: 50.625%;
+  }
+  #grid-container #header .about-container #button input:checked ~ .frame-container {
+    top: 350px;
+  }
+}
+@media screen and (min-width: 1570px) {
+  #grid-container #header .about-container .contact-container h3 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0;
+    margin: 0 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .phone-icon, #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon, #grid-container #header .about-container .contact-container .socialMedia-container .github-icon, #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .phone-icon img, #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon img, #grid-container #header .about-container .contact-container .socialMedia-container .github-icon img, #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon img {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .phone-icon a, #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon a, #grid-container #header .about-container .contact-container .socialMedia-container .github-icon a, #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon a {
+    font-size: 2.3rem;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .github-icon {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon {
+    order: 1;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon a {
+    order: 1;
+    margin-right: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon img {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .github-icon a {
+    order: 1;
+    margin-right: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .github-icon img {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container {
+    flex-direction: column;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .github-icon a {
+    order: 2;
+    margin-right: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .github-icon img {
+    order: 1;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon {
+    order: 3;
+    margin-right: 0;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon a {
+    order: 2;
+    margin-right: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon img {
+    order: 1;
+  }
+  #grid-container #header .about-container .about h1 {
+    font-size: 3rem;
+  }
+  #grid-container #header .about-container .about p {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 2100px) and (max-width: 2560px) {
+  /*---------- Main Table Article ---------*/
+  #grid-container #header .brand-container {
+    width: 100%;
+    padding: 0;
+  }
+  #grid-container #header .brand-container .brand-logo-container {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  #grid-container #header .brand-container .brand-logo-container img {
+    width: 80px;
+    height: 80px;
+  }
+  #grid-container #header .brand-container .brand-logo-container .brand-name {
+    font-size: 3rem;
+    padding-bottom: 5px;
+  }
+  #grid-container #header .brand-container .occupation {
+    font-size: 2.1rem;
+    top: 85px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  #grid-container #header .brand-container {
+    width: 70%;
+    max-width: unset;
+    top: -45vh;
+  }
+  #grid-container #header .brand-container .brand-logo-container {
+    border-bottom: 1px solid #4fc65d;
+    padding-bottom: 8px;
+  }
+  #grid-container #header .brand-container .brand-logo-container img {
+    width: 80px;
+    height: 80px;
+    margin: 0 -20px;
+  }
+  #grid-container #header .brand-container .brand-logo-container .brand-name {
+    font-size: 3rem;
+    align-self: flex-end;
+    padding-bottom: 5px;
+  }
+  #grid-container #header .brand-container .occupation {
+    font-size: 2rem;
+    font-weight: 600;
+    top: 90px;
+    border: none;
+  }
+  #grid-container #header .about-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+    bottom: 0;
+    width: 100%;
+  }
+  #grid-container #header .about-container .about h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+  #grid-container #header .about-container .about p {
+    font-size: 1.9rem;
+  }
+  #grid-container #header .about-container .contact-container h3 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0;
+    margin: 0 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .phone-icon, #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon, #grid-container #header .about-container .contact-container .socialMedia-container .github-icon, #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .phone-icon img, #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon img, #grid-container #header .about-container .contact-container .socialMedia-container .github-icon img, #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon img {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .phone-icon a, #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon a, #grid-container #header .about-container .contact-container .socialMedia-container .github-icon a, #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon a {
+    font-size: 2.3rem;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .github-icon {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .gmail-icon {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon {
+    order: 1;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon a {
+    order: 1;
+    margin-right: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon img {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .github-icon a {
+    order: 1;
+    margin-right: 10px;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .github-icon img {
+    order: 2;
+  }
+  #grid-container #header .about-container .contact-container .socialMedia-container .github-icon img, #grid-container #header .about-container .contact-container .socialMedia-container .linkedin-icon img {
+    margin-right: 0;
+  }
+  #grid-container #header .about-container #button {
+    margin-top: 20px;
+  }
+  #grid-container #header .about-container #button .youtube-btn {
+    height: 50px;
+    width: 260px;
+  }
+  #grid-container #header .about-container #button .youtube-btn .label-check {
+    font-size: 2rem;
+  }
+  #grid-container #header .about-container #button .frame-container {
+    left: 40%;
+    width: 50%;
+    padding-bottom: 30.625%;
+  }
+  #grid-container #header .about-container #button input:checked ~ .frame-container {
+    top: 200px;
+  }
+}
