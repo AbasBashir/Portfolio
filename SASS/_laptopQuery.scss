@@ -137,17 +137,67 @@
     
         }
 
+        #highlights{
 
+            h1{
+                font-size: 3rem;
+            }
+    
+            .card-container{
+                grid-area: highlights;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+    
+                .card{
 
-
-
-
-
+                    margin-bottom: 50px;
+    
+                    
+                    h2{
+                        font-size: 2.3rem;
+                    }
+    
+                    h3{
+                        font-size: 2.3rem;
+                    }
+    
+                    .content{
+                        p{
+                            font-size: 1.8rem;
+                            line-height: 1.5;
+                            padding: 0;
+                            padding-top: 20px;
+                        }
+                    }
+                }
+            }
+    
+        }
     
     }
 
+}
 
 
+// tweaking  highlights
+@media screen and (min-width: 968px) and (max-width: 1023px) {
+
+    #highlights{
+
+        .card-container{
+
+            .card{
+
+                margin-left: 5px;
+                margin-right: 5px;
+
+            }
+        }
+
+    }
 
 }
 
@@ -270,13 +320,10 @@
         //------------- EDUCATION -------------
         #education {
             grid-area: education;
-            // height: unset; 
-
+            margin-bottom: 80px;
 
             .main-title{
                 font-size: 3.5rem;
-                // padding-top: 20px;
-                // padding-bottom: 60px;
             }
             
             .line-container{
@@ -382,11 +429,68 @@
         }
     
 
+        #highlights{
+            grid-area: highlights;
+            padding-bottom: 10px;
+            
+            h1{
+                font-size: 3rem;
+            }
+
+            .card-container{
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                .card{
+                    width: 45%;
+
+                    
+                    h2{
+                        font-size: 2.5rem;
+                        padding: 10px 0;
+                    }
+
+                    .content{
+
+                        h3{
+                            font-size: 2rem;
+                        }
+
+                    }
+                }
+        }   }
         
 
     }
 
 }
+
+
+// tweaking highlights
+@media screen and (min-width: 1308px) and (max-width: 1340px){
+
+    #grid-container{
+
+        #education {
+            margin-bottom: 0;
+    
+        }
+
+        #highlights{
+
+            .card-container{
+
+                .card{
+                    width: 32%;
+                }
+        }   }
+        
+    
+    }
+}
+
+
 
 
 // contact-container + education
@@ -539,7 +643,7 @@
     
         }
 
-
+        
 
 
 
@@ -733,12 +837,13 @@
         //------------- EDUCATION -------------
         #education {
             padding-bottom: 0;
-
+            margin-bottom: 0;
 
             .line-container{
 
                 .line{
                     height: 5px;
+                    top: 100px;
                                 
                     /* Things in common 2 */
                     .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
@@ -820,6 +925,36 @@
             }  
     
         }
+
+        #highlights{
+            
+            h1{
+                font-size: 3.5rem;
+            }
+
+            .card-container{
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                .card{
+                    width: 45%;
+
+                    
+                    h2{
+                        font-size: 2.5rem;
+                        padding: 10px 0;
+                    }
+
+                    .content{
+
+                        h3{
+                            font-size: 2rem;
+                        }
+
+                    }
+                }
+        }   }
 
         
     }

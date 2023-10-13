@@ -262,7 +262,7 @@ html {
 }
 #grid-container #education {
   grid-area: education;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 #grid-container #education .main-title {
   text-align: center;
@@ -372,6 +372,61 @@ html {
 }
 #grid-container #education .line-container .line .circle6::before {
   content: "2023";
+}
+#grid-container #highlights {
+  grid-area: highlights;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/img/youtube-img.webp);
+  background-size: cover;
+  padding-bottom: 50px 0 100px;
+}
+#grid-container #highlights h1 {
+  font-size: 2.7rem;
+  text-align: center;
+  color: #4fc65d;
+  margin-top: 30px;
+}
+#grid-container #highlights .card-container {
+  margin-top: 30px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#grid-container #highlights .card-container .card {
+  border: 2px solid #008F11;
+  border-radius: 10px;
+  background-color: #4fc65d;
+  width: 90%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+#grid-container #highlights .card-container .card h2 {
+  font-size: 2.3rem;
+  padding: 15px;
+  color: #000000;
+}
+#grid-container #highlights .card-container .card .content {
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  height: 330px;
+}
+#grid-container #highlights .card-container .card .content h3 {
+  color: #008F11;
+  font-size: 2.3rem;
+  padding-top: 20px;
+  color: #a5a4a4;
+  font-weight: bold;
+}
+#grid-container #highlights .card-container .card .content p {
+  font-size: 1.8rem;
+  padding: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #000000;
 }
 @media screen and (min-width: 650px) and (max-width: 1024px) {
   #grid-container #header .about-container {
@@ -513,6 +568,38 @@ html {
   #grid-container #education .line-container .line .circle6 .job {
     word-wrap: unset;
   }
+  #grid-container #highlights h1 {
+    font-size: 3rem;
+  }
+  #grid-container #highlights .card-container {
+    grid-area: highlights;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #grid-container #highlights .card-container .card {
+    margin-bottom: 50px;
+  }
+  #grid-container #highlights .card-container .card h2 {
+    font-size: 2.3rem;
+  }
+  #grid-container #highlights .card-container .card h3 {
+    font-size: 2.3rem;
+  }
+  #grid-container #highlights .card-container .card .content p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    padding: 0;
+    padding-top: 20px;
+  }
+}
+@media screen and (min-width: 968px) and (max-width: 1023px) {
+  #highlights .card-container .card {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 @media screen and (min-width: 1024px) {
   #grid-container {
@@ -622,6 +709,7 @@ html {
   }
   #grid-container #education {
     grid-area: education;
+    margin-bottom: 80px;
   }
   #grid-container #education .main-title {
     font-size: 3.5rem;
@@ -747,6 +835,36 @@ html {
   }
   #grid-container #education .line-container .line .circle6 .job {
     width: fit-content;
+  }
+  #grid-container #highlights {
+    grid-area: highlights;
+    padding-bottom: 10px;
+  }
+  #grid-container #highlights h1 {
+    font-size: 3rem;
+  }
+  #grid-container #highlights .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #grid-container #highlights .card-container .card {
+    width: 45%;
+  }
+  #grid-container #highlights .card-container .card h2 {
+    font-size: 2.5rem;
+    padding: 10px 0;
+  }
+  #grid-container #highlights .card-container .card .content h3 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1308px) and (max-width: 1340px) {
+  #grid-container #education {
+    margin-bottom: 0;
+  }
+  #grid-container #highlights .card-container .card {
+    width: 32%;
   }
 }
 @media screen and (min-width: 1570px) {
@@ -1069,9 +1187,11 @@ html {
   }
   #grid-container #education {
     padding-bottom: 0;
+    margin-bottom: 0;
   }
   #grid-container #education .line-container .line {
     height: 5px;
+    top: 100px;
     /* Things in common 2 */
     /*---------- point 1: Middle School ---------*/
     /*---------- point 2: High School ---------*/
@@ -1176,5 +1296,23 @@ html {
   }
   #grid-container #education .line-container .line .circle6 .job {
     width: 260px;
+  }
+  #grid-container #highlights h1 {
+    font-size: 3.5rem;
+  }
+  #grid-container #highlights .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #grid-container #highlights .card-container .card {
+    width: 45%;
+  }
+  #grid-container #highlights .card-container .card h2 {
+    font-size: 2.5rem;
+    padding: 10px 0;
+  }
+  #grid-container #highlights .card-container .card .content h3 {
+    font-size: 2rem;
   }
 }
