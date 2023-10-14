@@ -176,6 +176,76 @@
             }
     
         }
+
+
+
+            // skills 
+
+            #skills{
+        
+                .main-title{
+                    font-size: 3.5rem;
+                }
+        
+                .skills-container{
+
+                    // Things in common
+                    .skill-common{
+                     
+                        .skill-name{
+                            font-size: 2.4rem;
+                        }
+    
+                        .skill-bar{
+                            height: 24px;
+                            border-radius: 3px;
+                            width: 95%;
+                            margin-left: 10px;
+                
+                            .skill-percent::before{
+                                padding: 8px 10px;
+                                font-size: 1.9rem;
+                            }
+                
+                            
+                            .skill-percent::after{
+                                content: '';
+                                width: 10px;
+                                height: 10px;
+                            }
+                        }
+    
+                    } 
+    
+    
+                /*---------- Specific stat for HTML ---------*/
+                .html-container{
+                    @include mobile-skill-bar(left, 20px, 90%, 32px, 28px);
+                }
+    
+                /*---------- Specific stat for CSS ---------*/
+                .css-container{
+                    @include mobile-skill-bar(left, 30px, 80%, 32px, 28px);
+                    
+                }
+    
+                /*---------- Specific stat for PYTHON ---------*/
+                .python-container{
+                    @include mobile-skill-bar(left, 32px, 30%, 32px, 28px);
+                }
+    
+                /*---------- Specific stat for C ---------*/
+                .c-container{
+                    @include mobile-skill-bar(left, 10px, 65%, 32px, 28px);
+                }
+    
+            }
+    
+        }
+
+
+
+
     
     }
 
@@ -462,9 +532,230 @@
         }   }
         
 
+
+        #skills{
+
+            .skills-container{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: start;
+                height: 200px;
+
+
+                .skill-common{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center; 
+                    max-width: 300px;
+
+                    .skill-bar{
+                        margin: 0;
+                        height: 18px;
+                    }
+
+                    .skill-name{
+                        margin: 0;
+                        margin-right: 10px;
+                        font-size: 2rem;
+                    }
+                }
+
+                .html-container{
+                    .skill-name{
+                        margin-left: 25px;
+                    }
+            
+                }
+
+                .c-container{
+                    
+                    .skill-name{
+                        margin-left: 26px;
+                    }
+            
+                }
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 }
+
+// tweaking skills part 1
+@media screen and (min-width: 1288px) and (max-width: 1685px) {
+
+
+    #grid-container{
+
+        #skills{
+
+            .skills-container{
+                width: 95%;
+
+                .skill-common{ 
+                    max-width: 400px;
+
+                    .skill-bar{
+                        height: 22px;
+                    }
+
+                    .skill-name{
+
+                        font-size: 2.2rem;
+                    }
+                }
+
+
+
+                //Specific stat for HTML 
+                .html-container{
+                    @include mobile-skill-bar2(28px, 25px);
+                }
+
+                // Specific stat for CSS 
+                .css-container{
+                    @include mobile-skill-bar2(28px, 25px);
+                }
+
+                // Specific stat for PYTHON 
+                .python-container{
+                    @include mobile-skill-bar2(28px, 25px);
+                }
+
+                // Specific stat for C 
+                .c-container{
+                    @include mobile-skill-bar2(28px, 25px);
+                }
+
+
+            }
+
+        }
+
+
+
+    }
+
+
+}
+
+
+
+// tweaking skills part 2
+@media screen and (min-width: 2111px) and (min-width: 2258px) {
+
+
+    #grid-container{
+
+        #skills{
+
+            .skills-container{
+                width: 88%;
+
+                .skill-common{ 
+                    max-width: 580px;
+
+                    .skill-bar{
+                        height: 25px;
+
+                        .skill-percent::before{
+                            padding: 8px 12px;
+                            border-radius: 4px;
+                            font-size: 1.8rem;
+                        }
+            
+                        
+                        .skill-percent::after{
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+
+                    .skill-name{
+
+                        font-size: 2.4rem;
+                    }
+                }
+
+                
+                .html-container{
+                    .skill-name{
+                        margin-left: 31px;
+                    }
+            
+                }
+
+                .c-container{
+                    
+                    .skill-name{
+                        margin-left: 31px;
+                    }
+            
+                }
+
+
+
+                //Specific stat for HTML 
+                .html-container{
+                    @include mobile-skill-bar2(32px, 29px);
+                }
+
+                // Specific stat for CSS 
+                .css-container{
+                    @include mobile-skill-bar2(32px, 29px);
+                }
+
+                // Specific stat for PYTHON 
+                .python-container{
+                    @include mobile-skill-bar2(32px, 29px);
+                }
+
+                // Specific stat for C 
+                .c-container{
+                    @include mobile-skill-bar2(32px, 29px);
+                }
+
+
+            }
+
+        }
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // tweaking highlights
@@ -955,6 +1246,58 @@
                     }
                 }
         }   }
+
+
+        #skills{
+
+            .main-title{
+                font-size: 3.5rem;
+            }
+
+            .skills-container{
+                height: 250px;
+
+                .skill-common{ 
+
+                    .skill-bar{
+
+                        .skill-percent::before{
+                            padding: 10px 14px;
+                            font-size: 1.9rem;
+                        }
+            
+                        
+                        .skill-percent::after{
+                            width: 13px;
+                            height: 13px;
+                        }
+                    }
+
+                    .skill-name{
+
+                        font-size: 2.5rem;
+                    }
+                }
+
+                
+                .html-container{
+                    .skill-name{
+                        margin-left: 32px;
+                    }
+            
+                }
+
+                .c-container{
+                    
+                    .skill-name{
+                        margin-left: 32px;
+                    }
+            
+                }
+
+            }
+
+        }
 
         
     }

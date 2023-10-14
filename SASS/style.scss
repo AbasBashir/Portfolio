@@ -502,7 +502,111 @@ html{
 
     }
 
+        // skills 
+        #skills{
+            grid-area: skills;
+            padding-top: 30px;
+            padding-bottom: 50px;
+            text-align: center;
+    
+    
+            .main-title{
+                font-size: 3rem;
+                padding-bottom: 40px;
+                color: $primary-color;
+            }
+    
+            .skills-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin: 0 auto;
+                width: 95%;
+                height: 400px;
 
+                // Things in common
+                .skill-common{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .skill-name{
+                        width: fit-content;
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                        color: #000000;
+                        margin-left: 10px;
+                        margin-bottom: 5px;
+            
+                    }
+
+                    .skill-bar{
+                        background-color: $skill-bar-background-color;
+                        height: 20px;
+                        border-radius: 3px;
+                        width: 95%;
+                        margin-left: 10px;
+            
+                        .skill-percent{
+                            position: relative;
+                            background-color: $skill-bar-color;
+                            height: 100%;
+                            border-radius: 3px;
+                            z-index: -1;
+                        }
+            
+                        .skill-percent::before{
+                            content: attr(data-percent);
+                            position: absolute;
+                            background-color: $primary-color;
+                            padding: 4px 6px;
+                            border-radius: 4px;
+                            font-size: 1.8rem;
+                            right: 0;
+                            transform: translateX(50%);
+                            color: #fff;
+                            font-weight: bold;
+                        }
+            
+                        
+                        .skill-percent::after{
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            background-color: $primary-color;
+                            position: absolute;
+                            right: 0;
+                            transform: translateX(50%) rotate(45deg);
+                            z-index: -1;
+                        }
+                    }
+
+                } 
+
+
+            //Specific stat for HTML 
+            .html-container{
+                @include mobile-skill-bar(left, 20px, 90%, 25px, 22px);
+            }
+
+            // Specific stat for CSS 
+            .css-container{
+                @include mobile-skill-bar(left, 30px, 80%, 25px, 23px);
+            }
+
+            // Specific stat for PYTHON 
+            .python-container{
+                @include mobile-skill-bar(left, 32px, 30%, 25px, 23px);
+            }
+
+            // Specific stat for C 
+            .c-container{
+                @include mobile-skill-bar(left, 10px, 65%, 25px, 23px);
+            }
+
+        }
+
+    }
 
 
     @import "tweaks"; // Few tweaks made using Media queries that are within boundaries of mobile-first

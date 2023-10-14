@@ -231,3 +231,40 @@
   border-radius: 100%;
   z-index: -1;
 }
+
+
+@mixin mobile-skill-bar($text-align, $margin-bottom, $width, $before-top, $after-top) {
+
+  .skill-name {
+    text-align: $text-align;
+  }
+
+  .skill-bar {
+    margin-bottom: $margin-bottom;
+  }
+
+  .skill-bar .skill-percent {
+    width: $width;
+  }
+
+  .skill-bar .skill-percent::before {
+    top: $before-top;
+  }
+
+  .skill-bar .skill-percent::after {
+    top: $after-top;
+  }
+}
+
+
+
+@mixin mobile-skill-bar2($before-top, $after-top) {
+  
+  .skill-bar .skill-percent::before {
+    top: $before-top;
+  }
+
+  .skill-bar .skill-percent::after {
+    top: $after-top;
+  }
+}

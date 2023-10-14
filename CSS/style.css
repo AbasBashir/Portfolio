@@ -428,6 +428,134 @@ html {
   font-weight: 600;
   color: #000000;
 }
+#grid-container #skills {
+  grid-area: skills;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+#grid-container #skills .main-title {
+  font-size: 3rem;
+  padding-bottom: 40px;
+  color: #008F11;
+}
+#grid-container #skills .skills-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 95%;
+  height: 400px;
+}
+#grid-container #skills .skills-container .skill-common {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#grid-container #skills .skills-container .skill-common .skill-name {
+  width: fit-content;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+#grid-container #skills .skills-container .skill-common .skill-bar {
+  background-color: rgba(147, 225, 157, 0.5);
+  height: 20px;
+  border-radius: 3px;
+  width: 95%;
+  margin-left: 10px;
+}
+#grid-container #skills .skills-container .skill-common .skill-bar .skill-percent {
+  position: relative;
+  background-color: #4fc65d;
+  height: 100%;
+  border-radius: 3px;
+  z-index: -1;
+}
+#grid-container #skills .skills-container .skill-common .skill-bar .skill-percent::before {
+  content: attr(data-percent);
+  position: absolute;
+  background-color: #008F11;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 1.8rem;
+  right: 0;
+  transform: translateX(50%);
+  color: #fff;
+  font-weight: bold;
+}
+#grid-container #skills .skills-container .skill-common .skill-bar .skill-percent::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #008F11;
+  position: absolute;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  z-index: -1;
+}
+#grid-container #skills .skills-container .html-container .skill-name {
+  text-align: left;
+}
+#grid-container #skills .skills-container .html-container .skill-bar {
+  margin-bottom: 20px;
+}
+#grid-container #skills .skills-container .html-container .skill-bar .skill-percent {
+  width: 90%;
+}
+#grid-container #skills .skills-container .html-container .skill-bar .skill-percent::before {
+  top: 25px;
+}
+#grid-container #skills .skills-container .html-container .skill-bar .skill-percent::after {
+  top: 22px;
+}
+#grid-container #skills .skills-container .css-container .skill-name {
+  text-align: left;
+}
+#grid-container #skills .skills-container .css-container .skill-bar {
+  margin-bottom: 30px;
+}
+#grid-container #skills .skills-container .css-container .skill-bar .skill-percent {
+  width: 80%;
+}
+#grid-container #skills .skills-container .css-container .skill-bar .skill-percent::before {
+  top: 25px;
+}
+#grid-container #skills .skills-container .css-container .skill-bar .skill-percent::after {
+  top: 23px;
+}
+#grid-container #skills .skills-container .python-container .skill-name {
+  text-align: left;
+}
+#grid-container #skills .skills-container .python-container .skill-bar {
+  margin-bottom: 32px;
+}
+#grid-container #skills .skills-container .python-container .skill-bar .skill-percent {
+  width: 30%;
+}
+#grid-container #skills .skills-container .python-container .skill-bar .skill-percent::before {
+  top: 25px;
+}
+#grid-container #skills .skills-container .python-container .skill-bar .skill-percent::after {
+  top: 23px;
+}
+#grid-container #skills .skills-container .c-container .skill-name {
+  text-align: left;
+}
+#grid-container #skills .skills-container .c-container .skill-bar {
+  margin-bottom: 10px;
+}
+#grid-container #skills .skills-container .c-container .skill-bar .skill-percent {
+  width: 65%;
+}
+#grid-container #skills .skills-container .c-container .skill-bar .skill-percent::before {
+  top: 25px;
+}
+#grid-container #skills .skills-container .c-container .skill-bar .skill-percent::after {
+  top: 23px;
+}
 @media screen and (min-width: 650px) and (max-width: 1024px) {
   #grid-container #header .about-container {
     width: 100%;
@@ -593,6 +721,93 @@ html {
     line-height: 1.5;
     padding: 0;
     padding-top: 20px;
+  }
+  #grid-container #skills .main-title {
+    font-size: 3.5rem;
+  }
+  #grid-container #skills .skills-container {
+    /*---------- Specific stat for HTML ---------*/
+    /*---------- Specific stat for CSS ---------*/
+    /*---------- Specific stat for PYTHON ---------*/
+    /*---------- Specific stat for C ---------*/
+  }
+  #grid-container #skills .skills-container .skill-common .skill-name {
+    font-size: 2.4rem;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-bar {
+    height: 24px;
+    border-radius: 3px;
+    width: 95%;
+    margin-left: 10px;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-bar .skill-percent::before {
+    padding: 8px 10px;
+    font-size: 1.9rem;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-bar .skill-percent::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+  }
+  #grid-container #skills .skills-container .html-container .skill-name {
+    text-align: left;
+  }
+  #grid-container #skills .skills-container .html-container .skill-bar {
+    margin-bottom: 20px;
+  }
+  #grid-container #skills .skills-container .html-container .skill-bar .skill-percent {
+    width: 90%;
+  }
+  #grid-container #skills .skills-container .html-container .skill-bar .skill-percent::before {
+    top: 32px;
+  }
+  #grid-container #skills .skills-container .html-container .skill-bar .skill-percent::after {
+    top: 28px;
+  }
+  #grid-container #skills .skills-container .css-container .skill-name {
+    text-align: left;
+  }
+  #grid-container #skills .skills-container .css-container .skill-bar {
+    margin-bottom: 30px;
+  }
+  #grid-container #skills .skills-container .css-container .skill-bar .skill-percent {
+    width: 80%;
+  }
+  #grid-container #skills .skills-container .css-container .skill-bar .skill-percent::before {
+    top: 32px;
+  }
+  #grid-container #skills .skills-container .css-container .skill-bar .skill-percent::after {
+    top: 28px;
+  }
+  #grid-container #skills .skills-container .python-container .skill-name {
+    text-align: left;
+  }
+  #grid-container #skills .skills-container .python-container .skill-bar {
+    margin-bottom: 32px;
+  }
+  #grid-container #skills .skills-container .python-container .skill-bar .skill-percent {
+    width: 30%;
+  }
+  #grid-container #skills .skills-container .python-container .skill-bar .skill-percent::before {
+    top: 32px;
+  }
+  #grid-container #skills .skills-container .python-container .skill-bar .skill-percent::after {
+    top: 28px;
+  }
+  #grid-container #skills .skills-container .c-container .skill-name {
+    text-align: left;
+  }
+  #grid-container #skills .skills-container .c-container .skill-bar {
+    margin-bottom: 10px;
+  }
+  #grid-container #skills .skills-container .c-container .skill-bar .skill-percent {
+    width: 65%;
+  }
+  #grid-container #skills .skills-container .c-container .skill-bar .skill-percent::before {
+    top: 32px;
+  }
+  #grid-container #skills .skills-container .c-container .skill-bar .skill-percent::after {
+    top: 28px;
   }
 }
 @media screen and (min-width: 968px) and (max-width: 1023px) {
@@ -857,6 +1072,126 @@ html {
   }
   #grid-container #highlights .card-container .card .content h3 {
     font-size: 2rem;
+  }
+  #grid-container #skills .skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    height: 200px;
+  }
+  #grid-container #skills .skills-container .skill-common {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 300px;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-bar {
+    margin: 0;
+    height: 18px;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-name {
+    margin: 0;
+    margin-right: 10px;
+    font-size: 2rem;
+  }
+  #grid-container #skills .skills-container .html-container .skill-name {
+    margin-left: 25px;
+  }
+  #grid-container #skills .skills-container .c-container .skill-name {
+    margin-left: 26px;
+  }
+}
+@media screen and (min-width: 1288px) and (max-width: 1685px) {
+  #grid-container #skills .skills-container {
+    width: 95%;
+  }
+  #grid-container #skills .skills-container .skill-common {
+    max-width: 400px;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-bar {
+    height: 22px;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-name {
+    font-size: 2.2rem;
+  }
+  #grid-container #skills .skills-container .html-container .skill-bar .skill-percent::before {
+    top: 28px;
+  }
+  #grid-container #skills .skills-container .html-container .skill-bar .skill-percent::after {
+    top: 25px;
+  }
+  #grid-container #skills .skills-container .css-container .skill-bar .skill-percent::before {
+    top: 28px;
+  }
+  #grid-container #skills .skills-container .css-container .skill-bar .skill-percent::after {
+    top: 25px;
+  }
+  #grid-container #skills .skills-container .python-container .skill-bar .skill-percent::before {
+    top: 28px;
+  }
+  #grid-container #skills .skills-container .python-container .skill-bar .skill-percent::after {
+    top: 25px;
+  }
+  #grid-container #skills .skills-container .c-container .skill-bar .skill-percent::before {
+    top: 28px;
+  }
+  #grid-container #skills .skills-container .c-container .skill-bar .skill-percent::after {
+    top: 25px;
+  }
+}
+@media screen and (min-width: 2111px) and (min-width: 2258px) {
+  #grid-container #skills .skills-container {
+    width: 88%;
+  }
+  #grid-container #skills .skills-container .skill-common {
+    max-width: 580px;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-bar {
+    height: 25px;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-bar .skill-percent::before {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 1.8rem;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-bar .skill-percent::after {
+    width: 12px;
+    height: 12px;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-name {
+    font-size: 2.4rem;
+  }
+  #grid-container #skills .skills-container .html-container .skill-name {
+    margin-left: 31px;
+  }
+  #grid-container #skills .skills-container .c-container .skill-name {
+    margin-left: 31px;
+  }
+  #grid-container #skills .skills-container .html-container .skill-bar .skill-percent::before {
+    top: 32px;
+  }
+  #grid-container #skills .skills-container .html-container .skill-bar .skill-percent::after {
+    top: 29px;
+  }
+  #grid-container #skills .skills-container .css-container .skill-bar .skill-percent::before {
+    top: 32px;
+  }
+  #grid-container #skills .skills-container .css-container .skill-bar .skill-percent::after {
+    top: 29px;
+  }
+  #grid-container #skills .skills-container .python-container .skill-bar .skill-percent::before {
+    top: 32px;
+  }
+  #grid-container #skills .skills-container .python-container .skill-bar .skill-percent::after {
+    top: 29px;
+  }
+  #grid-container #skills .skills-container .c-container .skill-bar .skill-percent::before {
+    top: 32px;
+  }
+  #grid-container #skills .skills-container .c-container .skill-bar .skill-percent::after {
+    top: 29px;
   }
 }
 @media screen and (min-width: 1308px) and (max-width: 1340px) {
@@ -1314,5 +1649,28 @@ html {
   }
   #grid-container #highlights .card-container .card .content h3 {
     font-size: 2rem;
+  }
+  #grid-container #skills .main-title {
+    font-size: 3.5rem;
+  }
+  #grid-container #skills .skills-container {
+    height: 250px;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-bar .skill-percent::before {
+    padding: 10px 14px;
+    font-size: 1.9rem;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-bar .skill-percent::after {
+    width: 13px;
+    height: 13px;
+  }
+  #grid-container #skills .skills-container .skill-common .skill-name {
+    font-size: 2.5rem;
+  }
+  #grid-container #skills .skills-container .html-container .skill-name {
+    margin-left: 32px;
+  }
+  #grid-container #skills .skills-container .c-container .skill-name {
+    margin-left: 32px;
   }
 }
