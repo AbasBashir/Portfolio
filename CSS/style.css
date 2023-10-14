@@ -27,7 +27,7 @@ html {
 }
 #grid-container #header {
   grid-area: header;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/img/background-intro.webp);
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/background-intro.webp);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -375,7 +375,7 @@ html {
 }
 #grid-container #highlights {
   grid-area: highlights;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/img/youtube-img.webp);
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/youtube-img.webp);
   background-size: cover;
 }
 #grid-container #highlights h1 {
