@@ -34,7 +34,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  height: 1000px;
 }
 #grid-container #header .brand-container {
   position: relative;
@@ -46,7 +46,7 @@ html {
   padding: 20px 20px 0;
   width: 90%;
   max-width: 400px;
-  top: -30vh;
+  top: -380px;
 }
 #grid-container #header .brand-container .brand-logo-container {
   display: flex;
@@ -377,7 +377,6 @@ html {
   grid-area: highlights;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/img/youtube-img.webp);
   background-size: cover;
-  padding-bottom: 50px 0 100px;
 }
 #grid-container #highlights h1 {
   font-size: 2.7rem;
@@ -556,6 +555,42 @@ html {
 #grid-container #skills .skills-container .c-container .skill-bar .skill-percent::after {
   top: 23px;
 }
+#grid-container #hobby {
+  grid-area: hobby;
+  padding-bottom: 50px;
+  text-align: center;
+}
+#grid-container #hobby h1 {
+  color: #008F11;
+  font-size: 3rem;
+  padding-bottom: 50px;
+}
+#grid-container #hobby table {
+  background-color: #c4ffcb;
+  table-layout: fixed;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  line-height: 2.2;
+  z-index: -1;
+}
+#grid-container #hobby table td, #grid-container #hobby table th {
+  border: 2px solid #000000;
+}
+#grid-container #hobby table th {
+  background: #5fd06c;
+  word-wrap: break-word;
+  color: black;
+  padding: 0;
+  line-height: 2;
+  font-size: 1.5rem;
+}
+#grid-container #hobby table td {
+  color: #000000;
+  padding: 0;
+  font-size: calc(24px - 1vw);
+}
 @media screen and (min-width: 650px) and (max-width: 1024px) {
   #grid-container #header .about-container {
     width: 100%;
@@ -681,9 +716,6 @@ html {
   #grid-container #education .main-title {
     font-size: 3.5rem;
   }
-  #grid-container #education .line-container .line {
-    /* Things in common 2 */
-  }
   #grid-container #education .line-container .line .circle1 .job, #grid-container #education .line-container .line .circle2 .job, #grid-container #education .line-container .line .circle3 .job, #grid-container #education .line-container .line .circle4 .job, #grid-container #education .line-container .line .circle5 .job, #grid-container #education .line-container .line .circle6 .job {
     font-size: 2rem;
   }
@@ -724,12 +756,6 @@ html {
   }
   #grid-container #skills .main-title {
     font-size: 3.5rem;
-  }
-  #grid-container #skills .skills-container {
-    /*---------- Specific stat for HTML ---------*/
-    /*---------- Specific stat for CSS ---------*/
-    /*---------- Specific stat for PYTHON ---------*/
-    /*---------- Specific stat for C ---------*/
   }
   #grid-container #skills .skills-container .skill-common .skill-name {
     font-size: 2.4rem;
@@ -809,11 +835,144 @@ html {
   #grid-container #skills .skills-container .c-container .skill-bar .skill-percent::after {
     top: 28px;
   }
+  #grid-container #hobby {
+    padding-top: 30px;
+  }
+  #grid-container #hobby h1 {
+    font-size: 3.5rem;
+    padding-bottom: 50px;
+  }
+  #grid-container #hobby table {
+    width: 70%;
+    line-height: 2.5;
+  }
+  #grid-container #hobby table th {
+    font-size: 1.9rem;
+  }
+  #grid-container #hobby table td {
+    color: #000000;
+    padding: 0;
+    font-size: calc(32px - 1vw);
+  }
 }
 @media screen and (min-width: 968px) and (max-width: 1023px) {
   #highlights .card-container .card {
     margin-left: 5px;
     margin-right: 5px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1250px) {
+  #grid-container #hobby h1 {
+    font-size: 3rem;
+    padding-bottom: 30px;
+  }
+  #grid-container #hobby table {
+    width: 70%;
+    line-height: 2;
+  }
+  #grid-container #hobby table th {
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+  #grid-container #hobby table td {
+    color: #000000;
+    padding: 0;
+    font-size: calc(32px - 1vw);
+  }
+}
+@media screen and (min-width: 1250px) and (max-width: 1520px) {
+  #grid-container #hobby h1 {
+    font-size: 3.5rem;
+    padding-bottom: 30px;
+  }
+  #grid-container #hobby table {
+    width: 70%;
+    line-height: 2;
+  }
+  #grid-container #hobby table th {
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+  #grid-container #hobby table td {
+    color: #000000;
+    padding: 0;
+    font-size: calc(34px - 1vw);
+  }
+}
+@media screen and (min-width: 1520px) and (max-width: 1900px) {
+  #grid-container #hobby h1 {
+    font-size: 3.5rem;
+    padding-bottom: 30px;
+  }
+  #grid-container #hobby table {
+    width: 60%;
+    line-height: 2;
+  }
+  #grid-container #hobby table th {
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+  #grid-container #hobby table td {
+    color: #000000;
+    padding: 0;
+    font-size: calc(42px - 1vw);
+  }
+}
+@media screen and (min-width: 1900px) and (max-width: 2200px) {
+  #grid-container #hobby h1 {
+    font-size: 3.5rem;
+    padding-bottom: 50px;
+  }
+  #grid-container #hobby table {
+    width: 50%;
+    line-height: 2;
+  }
+  #grid-container #hobby table th {
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+  #grid-container #hobby table td {
+    color: #000000;
+    padding: 0;
+    font-size: calc(44px - 1vw);
+  }
+}
+@media screen and (min-width: 2201px) and (max-width: 2258px) {
+  #grid-container #hobby h1 {
+    font-size: 3.5rem;
+    padding-bottom: 50px;
+  }
+  #grid-container #hobby table {
+    width: 50%;
+    line-height: 2;
+  }
+  #grid-container #hobby table th {
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+  #grid-container #hobby table td {
+    color: #000000;
+    padding: 0;
+    font-size: calc(44px - 1vw);
+  }
+}
+@media screen and (min-width: 2258px) and (max-width: 2560px) {
+  #grid-container #hobby h1 {
+    font-size: 3.5rem;
+    padding-bottom: 50px;
+  }
+  #grid-container #hobby table {
+    width: 50%;
+    line-height: 2;
+  }
+  #grid-container #hobby table th {
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+  #grid-container #hobby table td {
+    color: #000000;
+    padding: 0;
+    font-size: calc(44px - 1vw);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -829,7 +988,7 @@ html {
   }
   #grid-container #header .brand-container {
     padding-top: 8px;
-    top: -45vh;
+    top: -60vh;
   }
   #grid-container #header .brand-container .brand-logo-container img {
     width: 70px;
@@ -938,14 +1097,6 @@ html {
     top: 50px;
     width: 90%;
     height: 3px;
-    /* Things in common 1 */
-    /* Things in common 2 */
-    /*---------- point 1: Middle School ---------*/
-    /*---------- point 2: High School ---------*/
-    /*---------- point 3: Teacher Assistent ---------*/
-    /*---------- point 4: Motor vehicle assembler ---------*/
-    /*---------- point 5: Warehouse Worker ---------*/
-    /*---------- point 6: Chasacademy Student ---------*/
   }
   #grid-container #education .line-container .line .circle1::before, #grid-container #education .line-container .line .circle2::before, #grid-container #education .line-container .line .circle3::before, #grid-container #education .line-container .line .circle4::before, #grid-container #education .line-container .line .circle5::before, #grid-container #education .line-container .line .circle6::before {
     display: none;
@@ -1056,7 +1207,7 @@ html {
     padding-bottom: 10px;
   }
   #grid-container #highlights h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
   #grid-container #highlights .card-container {
     flex-direction: row;
@@ -1072,6 +1223,12 @@ html {
   }
   #grid-container #highlights .card-container .card .content h3 {
     font-size: 2rem;
+  }
+  #grid-container #skills {
+    padding-bottom: 0;
+  }
+  #grid-container #skills .main-title {
+    font-size: 3.5rem;
   }
   #grid-container #skills .skills-container {
     display: flex;
@@ -1104,6 +1261,14 @@ html {
   }
 }
 @media screen and (min-width: 1288px) and (max-width: 1685px) {
+  #grid-container #header {
+    grid-area: header;
+    height: 100%;
+  }
+  #grid-container #header .brand-container {
+    padding-top: 8px;
+    top: -45vh;
+  }
   #grid-container #skills .skills-container {
     width: 95%;
   }
@@ -1203,6 +1368,9 @@ html {
   }
 }
 @media screen and (min-width: 1570px) {
+  #grid-container #header .brand-container {
+    top: -45vh;
+  }
   #grid-container #header .about-container .contact-container h3 {
     font-size: 3rem;
     text-align: center;
@@ -1280,13 +1448,6 @@ html {
   }
   #grid-container #education .line-container .line {
     height: 5px;
-    /* Things in common 2 */
-    /*---------- point 1: Middle School ---------*/
-    /*---------- point 2: High School ---------*/
-    /*---------- point 3: Teacher Assistent ---------*/
-    /*---------- point 4: Motor vehicle assembler ---------*/
-    /*---------- point 5: Warehouse Worker ---------*/
-    /*---------- point 6: Chasacademy Student ---------*/
   }
   #grid-container #education .line-container .line .circle1, #grid-container #education .line-container .line .circle2, #grid-container #education .line-container .line .circle3, #grid-container #education .line-container .line .circle4, #grid-container #education .line-container .line .circle5, #grid-container #education .line-container .line .circle6 {
     position: absolute;
@@ -1386,8 +1547,15 @@ html {
     width: 235px;
   }
 }
+@media screen and (min-width: 1308px) and (max-width: 1500px) {
+  #grid-container #header .about-container #button .frame-container {
+    padding-bottom: 40.625%;
+  }
+  #grid-container #header .about-container #button input:checked ~ .frame-container {
+    top: 290px;
+  }
+}
 @media screen and (min-width: 2100px) and (max-width: 2560px) {
-  /*---------- Main Table Article ---------*/
   #grid-container #header .brand-container {
     width: 100%;
     padding: 0;
@@ -1407,6 +1575,14 @@ html {
   #grid-container #header .brand-container .occupation {
     font-size: 2.1rem;
     top: 85px;
+  }
+  #grid-container #header .about-container #button .frame-container {
+    left: 37%;
+    width: 60%;
+    padding-bottom: 40.625%;
+  }
+  #grid-container #header .about-container #button input:checked ~ .frame-container {
+    top: 200px;
   }
 }
 @media screen and (min-width: 2560px) {
@@ -1526,14 +1702,7 @@ html {
   }
   #grid-container #education .line-container .line {
     height: 5px;
-    top: 100px;
-    /* Things in common 2 */
-    /*---------- point 1: Middle School ---------*/
-    /*---------- point 2: High School ---------*/
-    /*---------- point 3: Teacher Assistent ---------*/
-    /*---------- point 4: Motor vehicle assembler ---------*/
-    /*---------- point 5: Warehouse Worker ---------*/
-    /*---------- point 6: Chasacademy Student ---------*/
+    top: 65px;
   }
   #grid-container #education .line-container .line .circle1, #grid-container #education .line-container .line .circle2, #grid-container #education .line-container .line .circle3, #grid-container #education .line-container .line .circle4, #grid-container #education .line-container .line .circle5, #grid-container #education .line-container .line .circle6 {
     position: absolute;
@@ -1672,5 +1841,22 @@ html {
   }
   #grid-container #skills .skills-container .c-container .skill-name {
     margin-left: 32px;
+  }
+  #grid-container #hobby h1 {
+    font-size: 3.5rem;
+    padding-bottom: 40px;
+  }
+  #grid-container #hobby table {
+    width: 50%;
+    line-height: 2;
+  }
+  #grid-container #hobby table th {
+    font-size: 1.9rem;
+    line-height: 2;
+  }
+  #grid-container #hobby table td {
+    color: #000000;
+    padding: 0;
+    font-size: calc(48px - 1vw);
   }
 }

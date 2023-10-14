@@ -86,7 +86,7 @@
             
         }
 
-        //------------- EDUCATION -------------
+        // EDUCATION 
         #education {
             grid-area: education;
 
@@ -99,7 +99,7 @@
 
                 .line{
 
-                    /* Things in common 2 */
+                    // Things in common 2
                     .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
 
                         .job{
@@ -218,23 +218,23 @@
                     } 
     
     
-                /*---------- Specific stat for HTML ---------*/
+                // Specific stat for HTML
                 .html-container{
                     @include mobile-skill-bar(left, 20px, 90%, 32px, 28px);
                 }
     
-                /*---------- Specific stat for CSS ---------*/
+                // Specific stat for CSS
                 .css-container{
                     @include mobile-skill-bar(left, 30px, 80%, 32px, 28px);
                     
                 }
     
-                /*---------- Specific stat for PYTHON ---------*/
+                // Specific stat for PYTHON
                 .python-container{
                     @include mobile-skill-bar(left, 32px, 30%, 32px, 28px);
                 }
     
-                /*---------- Specific stat for C ---------*/
+                // Specific stat for C 
                 .c-container{
                     @include mobile-skill-bar(left, 10px, 65%, 32px, 28px);
                 }
@@ -242,6 +242,32 @@
             }
     
         }
+
+
+
+    // hobby
+    #hobby{
+        padding-top: 30px;
+        h1{
+            font-size: 3.5rem;
+            padding-bottom: 50px;
+        }
+
+        table{
+            width: 70%;
+            line-height: 2.5;
+
+            th {
+                font-size: 1.9rem;
+            }
+
+            td {
+                color: #000000;
+                padding: 0 ;
+                font-size: calc(32px - 1vw);
+            }
+        }
+    }
 
 
 
@@ -274,6 +300,240 @@
 
 
 
+
+
+// tweaking hobby part 1
+@media screen and (min-width: 1024px) and (max-width: 1250px) {
+
+    #grid-container{
+
+        // hobby
+        #hobby{
+
+            h1{
+                font-size: 3rem;
+                padding-bottom: 30px;
+            }
+
+            table{
+                width: 70%;
+                line-height: 2;
+
+                th {
+                    font-size: 1.9rem;
+                    line-height: 1.5;
+                }
+
+                td {
+                    color: #000000;
+                    padding: 0 ;
+                    font-size: calc(32px - 1vw);
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+// tweaking hobby part 2
+@media screen and (min-width: 1250px) and (max-width: 1520px) {
+
+    #grid-container{
+
+        // hobby
+        #hobby{
+
+            h1{
+                font-size: 3.5rem;
+                padding-bottom: 30px;
+            }
+
+            table{
+                width: 70%;
+                line-height: 2;
+
+                th {
+                    font-size: 1.9rem;
+                    line-height: 1.5;
+                }
+
+                td {
+                    color: #000000;
+                    padding: 0 ;
+                    font-size: calc(34px - 1vw);
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+// tweaking hobby part 3
+@media screen and (min-width: 1520px) and (max-width: 1900px) {
+
+    #grid-container{
+
+        // hobby
+        #hobby{
+
+            h1{
+                font-size: 3.5rem;
+                padding-bottom: 30px;
+            }
+
+            table{
+                width: 60%;
+                line-height: 2;
+
+                th {
+                    font-size: 1.9rem;
+                    line-height: 1.5;
+                }
+
+                td {
+                    color: #000000;
+                    padding: 0 ;
+                    font-size: calc(42px - 1vw);
+                }
+            }
+        }
+
+
+    }
+
+}
+
+// tweaking hobby part 4
+@media screen and (min-width: 1900px) and (max-width: 2200px) {
+
+    #grid-container{
+
+        // hobby
+        #hobby{
+
+            h1{
+                font-size: 3.5rem;
+                padding-bottom: 50px;
+            }
+
+            table{
+                width: 50%;
+                line-height: 2;
+
+                th {
+                    font-size: 1.9rem;
+                    line-height: 1.5;
+                }
+
+                td {
+                    color: #000000;
+                    padding: 0 ;
+                    font-size: calc(44px - 1vw);
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+
+
+// tweaking hobby part 5
+@media screen and (min-width: 2201px) and (max-width: 2258px) {
+
+    #grid-container{
+
+        // hobby
+        #hobby{
+
+            h1{
+                font-size: 3.5rem;
+                padding-bottom: 50px;
+            }
+
+            table{
+                width: 50%;
+                line-height: 2;
+
+                th {
+                    font-size: 1.9rem;
+                    line-height: 1.5;
+                }
+
+                td {
+                    color: #000000;
+                    padding: 0 ;
+                    font-size: calc(44px - 1vw);
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+// tweaking hobby part 6
+@media screen and (min-width: 2258px) and (max-width: 2560px) {
+
+    #grid-container{
+
+        // hobby
+        #hobby{
+
+            h1{
+                font-size: 3.5rem;
+                padding-bottom: 50px;
+            }
+
+            table{
+                width: 50%;
+                line-height: 2;
+
+                th {
+                    font-size: 1.9rem;
+                    line-height: 1.5;
+                }
+
+                td {
+                    color: #000000;
+                    padding: 0 ;
+                    font-size: calc(44px - 1vw);
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // laptop size 1024px
 @media screen and (min-width: 1024px){
 
@@ -288,7 +548,7 @@
                             "header hobby";
 
 
-        //------------- EDUCATION -------------
+        // EDUCATION 
         #header{
 
             grid-area: header;
@@ -296,7 +556,7 @@
 
             .brand-container{
                 padding-top: 8px;
-                top: -45vh; //change to -870px
+                top: -60vh; //change to -870px
 
 
 
@@ -387,7 +647,7 @@
         }
 
 
-        //------------- EDUCATION -------------
+        // EDUCATION 
         #education {
             grid-area: education;
             margin-bottom: 80px;
@@ -408,12 +668,12 @@
                     height: 3px;
                     
                     
-                    /* Things in common 1 */
+                    // Things in common 1
                     .circle1::before, .circle2::before, .circle3::before, .circle4::before, .circle5::before, .circle6::before {
                         display: none;
                     }
                                 
-                    /* Things in common 2 */
+                    // Things in common 2 
                     .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
                         @include circle;
                         top: -6px;
@@ -436,7 +696,7 @@
                     }
 
                         
-                    /*---------- point 1: Middle School ---------*/
+                    // point 1: Middle School
                     .circle1{
                         @include education-circle-text(2%, -28px, -50px, 30px);
 
@@ -446,7 +706,7 @@
 
                     }
 
-                    /*---------- point 2: High School ---------*/
+                    // point 2: High School 
                     .circle2{
                         @include education-circle-text(20%, 25px, -45px, -30px);
 
@@ -455,7 +715,7 @@
                         }
                     }
 
-                    /*---------- point 3: Teacher Assistent ---------*/
+                    // point 3: Teacher Assistent 
                     .circle3{
                         @include education-circle-text(38%, -42px, -40px, 30px);
 
@@ -465,7 +725,7 @@
 
                     }
 
-                    /*---------- point 4: Motor vehicle assembler ---------*/
+                    // point 4: Motor vehicle assembler
                     .circle4{
                         @include education-circle-text(56%, 25px, -62px, -30px);
 
@@ -474,7 +734,7 @@
                         }
                     }
 
-                    /*---------- point 5: Warehouse Worker ---------*/
+                    // point 5: Warehouse Worker
                     .circle5{
                         @include education-circle-text(76%, -30px, -50px, 30px);
 
@@ -483,7 +743,7 @@
                         }
                     }
                     
-                    /*---------- point 6: Chasacademy Student ---------*/
+                    // point 6: Chasacademy Student 
 
                     .circle6{
                         @include education-circle-text(96%, 25px, -74px, -30px);
@@ -504,7 +764,7 @@
             padding-bottom: 10px;
             
             h1{
-                font-size: 3rem;
+                font-size: 3.2rem;
             }
 
             .card-container{
@@ -534,6 +794,11 @@
 
 
         #skills{
+            padding-bottom: 0;
+
+            .main-title{
+                font-size: 3.5rem;
+            }
 
             .skills-container{
                 display: flex;
@@ -582,18 +847,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 }
@@ -603,6 +856,21 @@
 
 
     #grid-container{
+
+
+        #header{
+
+            grid-area: header;
+            height: 100%;
+
+            .brand-container{
+                padding-top: 8px;
+                top: -45vh; 
+
+            }
+        }
+
+
 
         #skills{
 
@@ -747,17 +1015,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // tweaking highlights
 @media screen and (min-width: 1308px) and (max-width: 1340px){
 
@@ -790,6 +1047,12 @@
     #grid-container{
 
         #header{
+
+
+            .brand-container{
+                top: -45vh; 
+
+            }
 
             .about-container{
     
@@ -845,7 +1108,7 @@
     
         }
 
-        //------------- EDUCATION -------------
+        // EDUCATION 
         #education {
 
             .line-container{
@@ -853,7 +1116,7 @@
                 .line{
                     height: 5px;
                                 
-                    /* Things in common 2 */
+                    // Things in common 2 
                     .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
                         @include circle2;
                         top: -8px;
@@ -872,7 +1135,7 @@
                     }
 
                         
-                    /*---------- point 1: Middle School ---------*/
+                    // point 1: Middle School
                     .circle1{
                         @include education-circle-text(2%, -28px, -50px, 30px);
 
@@ -882,7 +1145,7 @@
 
                     }
 
-                    /*---------- point 2: High School ---------*/
+                    // point 2: High School 
                     .circle2{
                         @include education-circle-text(18%, 30px, -90px, -30px);
 
@@ -891,7 +1154,7 @@
                         }
                     }
 
-                    /*---------- point 3: Teacher Assistent ---------*/
+                    // point 3: Teacher Assistent 
                     .circle3{
                         @include education-circle-text(38%, -28px, -90px, 30px);
 
@@ -901,7 +1164,7 @@
 
                     }
 
-                    /*---------- point 4: Motor vehicle assembler ---------*/
+                    // point 4: Motor vehicle assembler
                     .circle4{
                         @include education-circle-text(56%, 30px, -115px, -30px);
 
@@ -910,7 +1173,7 @@
                         }
                     }
 
-                    /*---------- point 5: Warehouse Worker ---------*/
+                    // point 5: Warehouse Worker 
                     .circle5{
                         @include education-circle-text(76%, -28px, -50px, 30px);
 
@@ -919,7 +1182,7 @@
                         }
                     }
                     
-                    /*---------- point 6: Chasacademy Student ---------*/
+                    // point 6: Chasacademy Student 
 
                     .circle6{
                         @include education-circle-text(96%, 30px, -135px, -30px);
@@ -935,33 +1198,55 @@
         }
 
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 
 }
 
 
+// tweaking youtube
+@media screen and (min-width: 1308px) and (max-width: 1500px){
+
+    #grid-container{
+        
+        #header{
+
+            .about-container{
+
+                #button{
+    
+                    .frame-container{
+                        padding-bottom: 40.625%; 
+                    }
+            
+                    input:checked ~ .frame-container{
+                        top: 290px;
+                    }
+                } 
+    
+            }
+
+        }
+
+        
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 // Tweak brand-logo
 @media screen and (min-width: 2100px) and (max-width: 2560px) {
 
-    /*---------- Main Table Article ---------*/
+    // Main Table Article 
     #grid-container{
 
         #header{
@@ -991,6 +1276,24 @@
                     font-size: 2.1rem;
                     top: 85px;
                 }
+            }
+
+
+            .about-container{
+    
+                #button{
+
+                    .frame-container{
+                        left: 37%;
+                        width: 60%;
+                        padding-bottom: 40.625%; 
+                    }
+            
+                    input:checked ~ .frame-container{
+                        top: 200px;
+                    }
+                } 
+    
             }
 
 
@@ -1121,11 +1424,7 @@
         }
 
 
-
-
-
-
-        //------------- EDUCATION -------------
+        // EDUCATION
         #education {
             padding-bottom: 0;
             margin-bottom: 0;
@@ -1134,9 +1433,9 @@
 
                 .line{
                     height: 5px;
-                    top: 100px;
+                    top: 65px;
                                 
-                    /* Things in common 2 */
+                    // Things in common 2 
                     .circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
                         @include circle2;
                         top: -8px;
@@ -1155,7 +1454,7 @@
                     }
 
                         
-                    /*---------- point 1: Middle School ---------*/
+                    // point 1: Middle School 
                     .circle1{
                         @include education-circle-text(2%, -30px, -60px, 30px);
 
@@ -1165,7 +1464,7 @@
 
                     }
 
-                    /*---------- point 2: High School ---------*/
+                    // point 2: High School 
                     .circle2{
                         @include education-circle-text(18%, 30px, -93px, -30px);
 
@@ -1174,7 +1473,7 @@
                         }
                     }
 
-                    /*---------- point 3: Teacher Assistent ---------*/
+                    // point 3: Teacher Assistent 
                     .circle3{
                         @include education-circle-text(38%, -30px, -96px, 30px);
 
@@ -1184,7 +1483,7 @@
 
                     }
 
-                    /*---------- point 4: Motor vehicle assembler ---------*/
+                    // point 4: Motor vehicle assembler 
                     .circle4{
                         @include education-circle-text(56%, 30px, -125px, -30px);
 
@@ -1193,7 +1492,7 @@
                         }
                     }
 
-                    /*---------- point 5: Warehouse Worker ---------*/
+                    // point 5: Warehouse Worker 
                     .circle5{
                         @include education-circle-text(76%, -30px, -50px, 30px);
 
@@ -1202,7 +1501,7 @@
                         }
                     }
                     
-                    /*---------- point 6: Chasacademy Student ---------*/
+                    // point 6: Chasacademy Student 
 
                     .circle6{
                         @include education-circle-text(96%, 30px, -120px, -30px);
@@ -1298,6 +1597,34 @@
             }
 
         }
+
+
+        // hobby
+        #hobby{
+
+            h1{
+                font-size: 3.5rem;
+                padding-bottom: 40px;
+            }
+
+            table{
+                width: 50%;
+                line-height: 2;
+
+                th {
+                    font-size: 1.9rem;
+                    line-height: 2;
+                }
+
+                td {
+                    color: #000000;
+                    padding: 0 ;
+                    font-size: calc(48px - 1vw);
+                }
+            }
+        }
+
+
 
         
     }
